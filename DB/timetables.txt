@@ -1,0 +1,25 @@
+﻿[
+    {
+        "TrainID": 1,
+        "PathID": 1,
+	"Days": [1,2,3,4,5],
+	"Hours": [{"StationID":1, "hour": 19, "min": 31},
+		{"StationID":5, "hour": 21, "min": 03}]
+    },
+    {
+        "TrainID": 2,
+        "PathID": 2,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 8, "min": 41},
+		{"StationID":22, "hour": 8, "min": 58},
+		{"StationID":23, "hour": 9, "min": 7},
+		{"StationID":5, "hour": 9, "min": 25}]
+    },
+    {
+        "TrainID": 3,
+        "PathID": 1,
+	"Days": [1,2,3,4,5],
+	"Hours": [{"StationID":1, "hour": 16, "min": 23},
+		{"StationID":5, "hour": 16, "min": 58}]
+    },
+]

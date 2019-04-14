@@ -1,0 +1,20 @@
+﻿[
+    {
+        "TrainID": 1,
+        "CompanyID": 1,
+	"TrainName": "POMORZANIN",
+	"PathIDs": [1]
+    },
+    {
+        "TrainID": 2,
+        "CompanyID": 3,
+	"TrainName": "osobowy",
+	"PathIDs": [2]
+    },
+    {
+        "TrainID": 3,
+        "CompanyID": 1,
+	"TrainName": "BARBAKAN",
+	"PathIDs": [1,3]
+    }
+]

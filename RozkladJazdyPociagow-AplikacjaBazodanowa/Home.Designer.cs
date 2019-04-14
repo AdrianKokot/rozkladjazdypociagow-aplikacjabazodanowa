@@ -38,7 +38,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.searchPanel = new RozkladJazdyPociagow_AplikacjaBazodanowa.search();
+            this.search1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.search();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -160,13 +160,15 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // searchPanel
+            // search1
             // 
-            this.searchPanel.Location = new System.Drawing.Point(204, 58);
-            this.searchPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(575, 300);
-            this.searchPanel.TabIndex = 13;
+            this.search1.BackColor = System.Drawing.Color.LightGray;
+            this.search1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.search1.Location = new System.Drawing.Point(204, 58);
+            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search1.Name = "search1";
+            this.search1.Size = new System.Drawing.Size(575, 300);
+            this.search1.TabIndex = 13;
             // 
             // Home
             // 
@@ -174,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.searchPanel);
+            this.Controls.Add(this.search1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
@@ -210,7 +212,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private search searchPanel;
+        private search search1;
     }
 }
 

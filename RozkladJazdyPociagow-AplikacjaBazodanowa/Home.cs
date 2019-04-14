@@ -15,7 +15,9 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public Home()
         {
             InitializeComponent();
-            searchPanel.BringToFront();
+            //searchPanel.BringToFront();
+            DataBase.ImportAll();
+            search1.InitAutoComplete();
         }
     }
 }
