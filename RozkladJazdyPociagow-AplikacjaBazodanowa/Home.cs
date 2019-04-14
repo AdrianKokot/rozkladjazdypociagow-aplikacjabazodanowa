@@ -18,6 +18,17 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             //searchPanel.BringToFront();
             DataBase.ImportAll();
             search1.InitAutoComplete();
+            search1.BringToFront();
+        }
+
+        private void btnSearchPanel_Click(object sender, EventArgs e)
+        {
+            search1.BringToFront();
+        }
+
+        private void btnTrainPanel_Click(object sender, EventArgs e)
+        {
+            timetableSearchResult1.BringToFront();
         }
     }
 }

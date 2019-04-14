@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.search1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.search();
+            this.timetableSearchResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.timetableSearchResult();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +83,7 @@
             this.btnSearchPanel.Text = "Wyszukaj połączenia";
             this.btnSearchPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchPanel.UseVisualStyleBackColor = false;
+            this.btnSearchPanel.Click += new System.EventHandler(this.btnSearchPanel_Click);
             // 
             // btnTrainPanel
             // 
@@ -99,6 +101,7 @@
             this.btnTrainPanel.Text = "Przebieg pociągu";
             this.btnTrainPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrainPanel.UseVisualStyleBackColor = false;
+            this.btnTrainPanel.Click += new System.EventHandler(this.btnTrainPanel_Click);
             // 
             // btnStationPanel
             // 
@@ -170,12 +173,23 @@
             this.search1.Size = new System.Drawing.Size(575, 300);
             this.search1.TabIndex = 13;
             // 
+            // timetableSearchResult1
+            // 
+            this.timetableSearchResult1.BackColor = System.Drawing.Color.LightGray;
+            this.timetableSearchResult1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.timetableSearchResult1.Location = new System.Drawing.Point(204, 58);
+            this.timetableSearchResult1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timetableSearchResult1.Name = "timetableSearchResult1";
+            this.timetableSearchResult1.Size = new System.Drawing.Size(575, 300);
+            this.timetableSearchResult1.TabIndex = 14;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.timetableSearchResult1);
             this.Controls.Add(this.search1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label1);
@@ -213,6 +227,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private search search1;
+        private timetableSearchResult timetableSearchResult1;
     }
 }
 

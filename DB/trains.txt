@@ -3,18 +3,114 @@
         "TrainID": 1,
         "CompanyID": 1,
 	"TrainName": "POMORZANIN",
-	"PathIDs": [1]
+	"PathIDs": [1,5]
     },
     {
         "TrainID": 2,
         "CompanyID": 3,
-	"TrainName": "osobowy",
-	"PathIDs": [2]
+	"TrainName": "PKM1",
+	"PathIDs": [2,4]
     },
     {
         "TrainID": 3,
         "CompanyID": 1,
 	"TrainName": "BARBAKAN",
-	"PathIDs": [1,3]
+	"PathIDs": [1,2,4]
+    },
+    {
+        "TrainID": 4,
+        "CompanyID": 1,
+	"TrainName": "WARTA",
+	"PathIDs": [3,6]
+    },
+    {
+        "TrainID": 5,
+        "CompanyID": 3,
+	"TrainName": "PKM2",
+	"PathIDs": [7,8]
+    },
+    {
+        "TrainID": 6,
+        "CompanyID": 3,
+	"TrainName": "PKM4",
+	"PathIDs": [7]
+    },
+    {
+        "TrainID": 7,
+        "CompanyID": 2,
+	"TrainName": "KAMIEŃCZUK",
+	"PathIDs": [9,11]
+    },
+    {
+        "TrainID": 8,
+        "CompanyID": 1,
+	"TrainName": "HALNY",
+	"PathIDs": [10,12]
+    },
+    {
+        "TrainID": 9,
+        "CompanyID": 2,
+	"TrainName": "WILCZAK",
+	"PathIDs": [9]
+    },
+    {
+        "TrainID": 10,
+        "CompanyID": 1,
+	"TrainName": "MIESZKO",
+	"PathIDs": [12]
+    },
+    {
+        "TrainID": 11,
+        "CompanyID": 3,
+	"TrainName": "PKM3",
+	"PathIDs": [13,14]
+    },
+    {
+        "TrainID": 12,
+        "CompanyID": 3,
+	"TrainName": "RZEPICHA",
+	"PathIDs": [13,14]
+    },
+    {
+        "TrainID": 13,
+        "CompanyID": 2,
+	"TrainName": "CHOCHLIK",
+	"PathIDs": [15,16]
+    },
+    {
+        "TrainID": 14,
+        "CompanyID": 1,
+	"TrainName": "SZKUNER",
+	"PathIDs": [17,18]
+    },
+    {
+        "TrainID": 15,
+        "CompanyID": 2,
+	"TrainName": "GWAREK",
+	"PathIDs": [15,16]
+    },
+    {
+        "TrainID": 16,
+        "CompanyID": 1,
+	"TrainName": "RADEK",
+	"PathIDs": [17,18]
+    },
+    {
+        "TrainID": 17,
+        "CompanyID": 1,
+	"TrainName": "ROZEWIE",
+	"PathIDs": [19,20]
+    },
+    {
+        "TrainID": 18,
+        "CompanyID": 2,
+	"TrainName": "CHOCHOŁ",
+	"PathIDs": [21,22]
+    },
+    {
+        "TrainID": 19,
+        "CompanyID": 2,
+	"TrainName": "DMOWSKI",
+	"PathIDs": [21,22]
     }
 ]

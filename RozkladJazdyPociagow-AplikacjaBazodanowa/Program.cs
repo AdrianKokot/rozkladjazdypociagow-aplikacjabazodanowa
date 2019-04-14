@@ -18,27 +18,32 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         }
     }
 
-    class Station
+    public class Station
     {
         public int StationID { get; set; }
         public string StationName { get; set; }
     }
 
-    class Train
+    public class Train
     {
         public int TrainID { get; set; }
         public int CompanyID { get; set; }
         public string TrainName { get; set; }
         public List<int> PathIDs { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, \"{1}\"", DataBase.companies.Find(x => x.CompanyID == this.CompanyID).ToString(), TrainName);
+        }
     }
 
-    class TrainPath
+    public class TrainPath
     {
         public int PathID { get; set; }
         public List<int> Stations { get; set; }
     }
 
-    class StationTime
+    public class StationTime : IComparable<StationTime>
     {
         public int StationID { get; set; }
         public int hour { get; set; }
@@ -55,14 +60,51 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             return string.Format("{0}:{1}", hour, min < 10 ? "0" + min : min.ToString());
         }
+
+        public int CompareTo(StationTime other)
+        {
+            //0 = równe
+            //1 = this > other
+            //-1 = this < other
+            if (this != null && other != null)
+                if (this.hour == other.hour)
+                {
+                    if (this.min > other.min)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+                else
+                {
+                    if (this.hour > other.hour)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+            else
+                return 0;
+        }
     }
 
-    class Timetable
+    public class Timetable : IComparable<Timetable>
     {
         public int TrainID { get; set; }
         public int PathID { get; set; }
         public List<int> Days { get; set; }
         public List<StationTime> Hours { get; set; }
+
+        public int CompareTo(Timetable other)
+        {
+            return this.Hours[0].CompareTo(other.Hours[0]);
+        }
 
         public string ToString(int startStationID, int endStationID)
         {
@@ -82,7 +124,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         }
     }
 
-    class TimetableResult
+    public class TimetableResult
     {
         public List<Timetable> timetable { get; set; }
         public int startStationID { get; set; }
@@ -98,7 +140,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         }
     }
 
-    class Company
+    public class Company
     {
         public int CompanyID { get; set; }
         public string CompanyName { get; set; }
@@ -106,7 +148,8 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         public override string ToString()
         {
-            return string.Format("\"{0}\" {1}", ShortCompanyName, CompanyName);
+            return ShortCompanyName;
+            //return string.Format("\"{0}\" {1}", ShortCompanyName, CompanyName);
         }
     }
 
@@ -175,15 +218,15 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                     return new TimetableResult();
                 } else
                 {
-
-                    MessageBox.Show(paths.Count.ToString());
+                    //MessageBox.Show(paths.Count.ToString());
                     List<Timetable> schedule = timetable.FindAll(x => paths.Exists(z => z.PathID == x.PathID) && x.Hours.Exists(z => z.hour >= time.hour && z.StationID == startStation.StationID) && x.Days.Contains(day));
                     if(schedule.Count < 1)
                     {
                         return new TimetableResult();
                     } else
                     {
-                        MessageBox.Show(schedule.Count.ToString());
+                        schedule.Sort();
+                        //MessageBox.Show(schedule.Count.ToString());
                         result.msg = "OK";
                         result.timetable = schedule;
                         return result;
@@ -192,8 +235,5 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                 }
             }               
         }
-
     }
-
-
 }

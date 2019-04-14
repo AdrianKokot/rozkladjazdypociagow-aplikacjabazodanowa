@@ -12,9 +12,15 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 {
     public partial class search : UserControl
     {
+        private bool firstCityValid = false;
+        private bool secondCityValid = false;
+
+
         public search()
         {
             InitializeComponent();
+            timetableSearchResult1.Visible = false;
+            exit.Visible = false;
         }
 
         public void InitAutoComplete()
@@ -26,6 +32,20 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             secondCity.AutoCompleteCustomSource = autoComplete;
         }
 
+        private bool ValidateCity(TextBox city, ErrorProvider error)
+        {
+            if (DataBase.stations.Exists(x => x.StationName.ToLower() == city.Text.ToLower()))
+            {
+                error.SetError(city, "");
+                return true;
+            }
+            else
+            {
+                error.SetError(city, "Podana stacja nie istnieje w naszej bazie");
+                return false;
+            }
+        }
+
         private void changeCities_Click(object sender, EventArgs e)
         {
             string firstVal = firstCity.Text;
@@ -35,19 +55,43 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            output.Text = "";
-            TimetableResult timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
-            if(timetable.msg == "OK")
+            if (!firstCityValid)
             {
-                foreach (Timetable timetbl in timetable.timetable)
-                {
-                    output.Text += timetbl.ToString(timetable.startStationID, timetable.endStationID) + "\n";
-                }
+                this.ActiveControl = firstCity;
+            } else if (!secondCityValid)
+            {
+                this.ActiveControl = secondCity;
             } else
             {
-                output.Text = "Przepraszamy ale nie udalo się znaleźć pociągu dla podanego połączenia";
+                timetableSearchResult1.Visible = true;
+                exit.Visible = true;
+                exit.BringToFront();
+                TimetableResult timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
+                if (timetable.msg == "OK")
+                {
+                    timetableSearchResult1.FullfillLabels(timetable);
+                }
+                else
+                {
+                    MessageBox.Show("Przepraszamy ale nie udalo się znaleźć pociągu dla podanego połączenia");
+                }
             }
-            
+        }
+
+        private void firstCity_Validating(object sender, CancelEventArgs e)
+        {
+            firstCityValid = ValidateCity(firstCity, firstCityError);
+        }
+
+        private void secondCity_Validating(object sender, CancelEventArgs e)
+        {
+            secondCityValid = ValidateCity(secondCity, secondCityError);
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            timetableSearchResult1.Visible = false;
+            exit.Visible = false;
         }
     }
 }

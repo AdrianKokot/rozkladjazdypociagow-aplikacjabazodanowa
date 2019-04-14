@@ -4,7 +4,14 @@
         "PathID": 1,
 	"Days": [1,2,3,4,5],
 	"Hours": [{"StationID":1, "hour": 19, "min": 31},
-		{"StationID":5, "hour": 21, "min": 03}]
+		{"StationID":5, "hour": 21, "min": 3}]
+    },
+    {
+        "TrainID": 1,
+        "PathID": 5,
+	"Days": [1,2,3,4,5],
+	"Hours": [{"StationID":5, "hour": 15, "min": 30},
+		{"StationID":1, "hour": 17, "min": 2}]
     },
     {
         "TrainID": 2,
@@ -18,8 +25,352 @@
     {
         "TrainID": 3,
         "PathID": 1,
-	"Days": [1,2,3,4,5],
-	"Hours": [{"StationID":1, "hour": 16, "min": 23},
-		{"StationID":5, "hour": 16, "min": 58}]
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 19, "min": 23},
+		{"StationID":5, "hour": 19, "min": 58}]
     },
+    {
+        "TrainID": 3,
+        "PathID": 2,
+	"Days": [1,2,3,4,5],
+	"Hours": [{"StationID":1, "hour": 14, "min": 41},
+		{"StationID":22, "hour": 14, "min": 58},
+		{"StationID":23, "hour": 15, "min": 7},
+		{"StationID":5, "hour": 15, "min": 25}]
+    },
+    {
+        "TrainID": 4,
+        "PathID": 3,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":7, "hour": 8, "min": 24},
+		{"StationID":14, "hour": 8, "min": 43},
+		{"StationID":24, "hour": 8, "min": 55},
+		{"StationID":1, "hour": 9, "min": 54},
+		{"StationID":5, "hour": 10, "min": 20}]
+    },
+    {
+        "TrainID": 4,
+        "PathID": 6,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":5, "hour": 11, "min": 10},
+		{"StationID":1, "hour": 11, "min": 36},
+		{"StationID":24, "hour": 12, "min": 35},
+		{"StationID":14, "hour": 12, "min": 37},
+		{"StationID":7, "hour": 12, "min": 56}]
+    },
+    {
+        "TrainID": 3,
+        "PathID": 4,
+	"Days": [1,2,3,4,5],
+	"Hours": [{"StationID":5, "hour": 17, "min": 36},
+		{"StationID":23, "hour": 17, "min": 54},
+		{"StationID":22, "hour": 18, "min": 3},
+		{"StationID":1, "hour": 18, "min": 20}]
+    },
+    {
+        "TrainID": 2,
+        "PathID": 4,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":5, "hour": 11, "min": 36},
+		{"StationID":23, "hour": 11, "min": 54},
+		{"StationID":22, "hour": 12, "min": 3},
+		{"StationID":1, "hour": 12, "min": 20}]
+    },
+    {
+        "TrainID": 5,
+        "PathID": 7,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":7, "hour": 10, "min": 3},
+		{"StationID":14, "hour": 10, "min": 21},
+		{"StationID":24, "hour": 10, "min": 35},
+		{"StationID":1, "hour": 11, "min": 25},
+		{"StationID":22, "hour": 11, "min": 42},
+		{"StationID":23, "hour": 11, "min": 52},
+		{"StationID":5, "hour": 12, "min": 9}]
+    },
+    {
+        "TrainID": 6,
+        "PathID": 7,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":7, "hour": 20, "min": 36},
+		{"StationID":14, "hour": 20, "min": 21},
+		{"StationID":24, "hour": 20, "min": 35},
+		{"StationID":1, "hour": 21, "min": 25},
+		{"StationID":22, "hour": 21, "min": 42},
+		{"StationID":23, "hour": 21, "min": 52},
+		{"StationID":5, "hour": 22, "min": 9}]
+    },
+    {
+        "TrainID": 5,
+        "PathID": 8,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":5, "hour": 15, "min": 7},
+		{"StationID":23, "hour": 15, "min": 33},
+		{"StationID":22, "hour": 15, "min": 41},
+		{"StationID":1, "hour": 16, "min": 2},
+		{"StationID":24, "hour": 16, "min": 36},
+		{"StationID":14, "hour": 16, "min": 51},
+		{"StationID":7, "hour": 17, "min": 13}]
+    },
+    {
+        "TrainID": 7,
+        "PathID": 9,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 15, "min": 56},
+		{"StationID":19, "hour": 16, "min": 18},
+		{"StationID":20, "hour": 16, "min": 43},
+		{"StationID":4, "hour": 17, "min": 19},
+		{"StationID":21, "hour": 17, "min": 55},
+		{"StationID":3, "hour": 19, "min": 0}]
+    },
+    {
+        "TrainID": 9,
+        "PathID": 9,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 13, "min": 56},
+		{"StationID":19, "hour": 14, "min": 18},
+		{"StationID":20, "hour": 14, "min": 43},
+		{"StationID":4, "hour": 15, "min": 19},
+		{"StationID":21, "hour": 15, "min": 55},
+		{"StationID":3, "hour": 17, "min": 0}]
+    },
+    {
+        "TrainID": 8,
+        "PathID": 10,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 17, "min": 1},
+		{"StationID":20, "hour": 17, "min": 30},
+		{"StationID":4, "hour": 18, "min": 6},
+		{"StationID":21, "hour": 18, "min": 35},
+		{"StationID":3, "hour": 19, "min": 20}]
+    },
+    {
+        "TrainID": 7,
+        "PathID": 11,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":3, "hour": 10, "min": 20},
+		{"StationID":21, "hour": 11, "min": 40},
+		{"StationID":4, "hour": 12, "min": 15},
+		{"StationID":20, "hour": 12, "min": 50},
+		{"StationID":19, "hour": 13, "min": 16},
+		{"StationID":1, "hour": 13, "min": 36}]
+    },
+    {
+        "TrainID": 10,
+        "PathID": 12,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":3, "hour": 16, "min": 45},
+		{"StationID":21, "hour": 17, "min": 29},
+		{"StationID":4, "hour": 18, "min": 10},
+		{"StationID":20, "hour": 18, "min": 41},
+		{"StationID":1, "hour": 19, "min": 12}]
+    },
+    {
+        "TrainID": 8,
+        "PathID": 12,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":3, "hour": 14, "min": 45},
+		{"StationID":21, "hour": 15, "min": 29},
+		{"StationID":4, "hour": 16, "min": 10},
+		{"StationID":20, "hour": 16, "min": 41},
+		{"StationID":1, "hour": 17, "min": 12}]
+    },
+    {
+        "TrainID": 7,
+        "PathID": 11,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":3, "hour": 20, "min": 20},
+		{"StationID":21, "hour": 21, "min": 40},
+		{"StationID":4, "hour": 22, "min": 15},
+		{"StationID":20, "hour": 22, "min": 50},
+		{"StationID":19, "hour": 23, "min": 16},
+		{"StationID":1, "hour": 23, "min": 36}]
+    },
+    {
+        "TrainID": 11,
+        "PathID": 13,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 14, "min": 07},
+		{"StationID":18, "hour": 14, "min": 39},
+		{"StationID":9, "hour": 15, "min": 12},
+		{"StationID":8, "hour": 15, "min": 37}]
+    },
+    {
+        "TrainID": 11,
+        "PathID": 14,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":8, "hour": 16, "min": 22},
+		{"StationID":9, "hour": 16, "min": 47},
+		{"StationID":18, "hour": 17, "min": 32},
+		{"StationID":1, "hour": 18, "min": 9}]
+    },
+    {
+        "TrainID": 11,
+        "PathID": 13,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 18, "min": 27},
+		{"StationID":18, "hour": 18, "min": 59},
+		{"StationID":9, "hour": 19, "min": 32},
+		{"StationID":8, "hour": 19, "min": 57}]
+    },
+    {
+        "TrainID": 11,
+        "PathID": 14,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":8, "hour": 20, "min": 2},
+		{"StationID":9, "hour": 20, "min": 27},
+		{"StationID":18, "hour": 21, "min": 12},
+		{"StationID":1, "hour": 21, "min": 49}]
+    },
+    {
+        "TrainID": 12,
+        "PathID": 13,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 10, "min": 10},
+		{"StationID":18, "hour": 10, "min": 42},
+		{"StationID":9, "hour": 11, "min": 15},
+		{"StationID":8, "hour": 11, "min": 40}]
+    },
+    {
+        "TrainID": 12,
+        "PathID": 14,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":8, "hour": 12, "min": 18},
+		{"StationID":9, "hour": 12, "min": 43},
+		{"StationID":18, "hour": 13, "min": 28},
+		{"StationID":1, "hour": 14, "min": 1}]
+    },
+    {
+        "TrainID": 12,
+        "PathID": 14,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":8, "hour": 8, "min": 18},
+		{"StationID":9, "hour": 8, "min": 43},
+		{"StationID":18, "hour": 9, "min": 28},
+		{"StationID":1, "hour": 10, "min": 1}]
+    },
+    {
+        "TrainID": 13,
+        "PathID": 15,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 14, "min": 47},
+		{"StationID":11, "hour": 15, "min": 15},
+		{"StationID":12, "hour": 15, "min": 26},
+		{"StationID":6, "hour": 17, "min": 8}]
+    },
+    {
+        "TrainID": 13,
+        "PathID": 16,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":6, "hour": 17, "min": 40},
+		{"StationID":12, "hour": 19, "min": 5},
+		{"StationID":11, "hour": 19, "min": 15},
+		{"StationID":1, "hour": 19, "min": 43}]
+    },
+    {
+        "TrainID": 14,
+        "PathID": 17,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":6, "hour": 8, "min": 13},
+		{"StationID":12, "hour": 9, "min": 22},
+		{"StationID":1, "hour": 9, "min": 55}]
+    },
+    {
+        "TrainID": 14,
+        "PathID": 18,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 10, "min": 51},
+		{"StationID":12, "hour": 11, "min": 22},
+		{"StationID":6, "hour": 12, "min": 33}]
+    },
+    {
+        "TrainID": 15,
+        "PathID": 15,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 13, "min": 27},
+		{"StationID":11, "hour": 13, "min": 55},
+		{"StationID":12, "hour": 14, "min": 6},
+		{"StationID":6, "hour": 15, "min": 48}]
+    },
+    {
+        "TrainID": 15,
+        "PathID": 16,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":6, "hour": 18, "min": 50},
+		{"StationID":12, "hour": 20, "min": 15},
+		{"StationID":11, "hour": 20, "min": 25},
+		{"StationID":1, "hour": 20, "min": 53}]
+    },
+    {
+        "TrainID": 16,
+        "PathID": 17,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":6, "hour": 20, "min": 5},
+		{"StationID":12, "hour": 21, "min": 14},
+		{"StationID":1, "hour": 21, "min": 47}]
+    },
+    {
+        "TrainID": 16,
+        "PathID": 18,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 22, "min": 10},
+		{"StationID":12, "hour": 22, "min": 41},
+		{"StationID":6, "hour": 23, "min": 52}]
+    },
+    {
+        "TrainID": 17,
+        "PathID": 19,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 11, "min": 57},
+		{"StationID":17, "hour": 12, "min": 41},
+		{"StationID":13, "hour": 13, "min": 14}]
+    },
+    {
+        "TrainID": 17,
+        "PathID": 20,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":13, "hour": 17, "min": 20},
+		{"StationID":17, "hour": 17, "min": 53},
+		{"StationID":1, "hour": 18, "min": 37}]
+    },
+    {
+        "TrainID": 18,
+        "PathID": 21,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 15, "min": 31},
+		{"StationID":15, "hour": 16, "min": 2},
+		{"StationID":16, "hour": 16, "min": 9},
+		{"StationID":17, "hour": 16, "min": 28},
+		{"StationID":13, "hour": 17, "min": 6}]
+    },
+    {
+        "TrainID": 19,
+        "PathID": 21,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 7, "min": 43},
+		{"StationID":15, "hour": 8, "min": 14},
+		{"StationID":16, "hour": 8, "min": 21},
+		{"StationID":17, "hour": 8, "min": 40},
+		{"StationID":13, "hour": 9, "min": 18}]
+    },
+    {
+        "TrainID": 18,
+        "PathID": 22,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":13, "hour": 17, "min": 39},
+		{"StationID":17, "hour": 18, "min": 14},
+		{"StationID":16, "hour": 18, "min": 33},
+		{"StationID":15, "hour": 18, "min": 40},
+		{"StationID":1, "hour": 19, "min": 11}]
+    },
+    {
+        "TrainID": 19,
+        "PathID": 22,
+	"Days": [1,2,3,4,5,6,0],
+	"Hours": [{"StationID":1, "hour": 13, "min": 33},
+		{"StationID":15, "hour": 14, "min": 4},
+		{"StationID":16, "hour": 14, "min": 1},
+		{"StationID":17, "hour": 14, "min": 30},
+		{"StationID":13, "hour": 15, "min": 8}]
+    }
 ]

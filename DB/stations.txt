@@ -4,10 +4,6 @@
         "StationName": "Poznań Główny"
     },
     {
-        "StationID": 2,
-        "StationName": "Warszawa Centralna"
-    },
-    {
         "StationID": 3,
         "StationName": "Wrocław Główny"
     },
@@ -21,7 +17,7 @@
     },
     {
         "StationID": 6,
-        "StationName": "Kutno"
+        "StationName": "Piła Główna"
     },
     {
         "StationID": 7,
@@ -29,15 +25,11 @@
     },
     {
         "StationID": 8,
-        "StationName": "Konin"
+        "StationName": "Gołańcz"
     },
     {
         "StationID": 9,
         "StationName": "Wągrowiec"
-    },
-    {
-        "StationID": 10,
-        "StationName": "Kołobrzeg"
     },
     {
         "StationID": 11,
@@ -77,11 +69,11 @@
     },
     {
         "StationID": 20,
-        "StationName": "Zielona Góra"
+        "StationName": "Kościan"
     },
     {
         "StationID": 21,
-        "StationName": "Nowa Sól"
+        "StationName": "Rawicz"
     },
     {
         "StationID": 22,
@@ -90,5 +82,9 @@
     {
         "StationID": 23,
         "StationName": "Pobiedziska"
+    },
+    {
+        "StationID": 24,
+        "StationName": "Opalenica"
     }
 ]
