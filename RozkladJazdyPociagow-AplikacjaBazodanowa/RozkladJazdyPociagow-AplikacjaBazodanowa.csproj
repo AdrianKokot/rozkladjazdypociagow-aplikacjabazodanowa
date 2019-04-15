@@ -95,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="search.resx">
       <DependentUpon>search.cs</DependentUpon>
@@ -127,6 +128,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dropDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

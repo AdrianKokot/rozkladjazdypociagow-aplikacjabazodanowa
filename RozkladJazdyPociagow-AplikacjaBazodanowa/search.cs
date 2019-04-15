@@ -15,7 +15,6 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         private bool firstCityValid = false;
         private bool secondCityValid = false;
 
-
         public search()
         {
             InitializeComponent();
@@ -55,21 +54,25 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+
             if (!firstCityValid)
             {
                 this.ActiveControl = firstCity;
-            } else if (!secondCityValid)
+            }
+            else if (!secondCityValid)
             {
                 this.ActiveControl = secondCity;
-            } else
+            }
+            else
             {
-                timetableSearchResult1.Visible = true;
-                exit.Visible = true;
-                exit.BringToFront();
                 TimetableResult timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
                 if (timetable.msg == "OK")
                 {
                     timetableSearchResult1.FullfillLabels(timetable);
+                    timetableSearchResult1.Visible = true;
+                    timetableSearchResult1.BringToFront();
+                    exit.Visible = true;
+                    exit.BringToFront();
                 }
                 else
                 {
@@ -92,6 +95,17 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             timetableSearchResult1.Visible = false;
             exit.Visible = false;
+            timetableSearchResult1.Reset();
+        }
+
+        private void firstCityBoxBack_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = firstCity;
+        }
+
+        private void secondCityBoxBack_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = secondCity;
         }
     }
 }
