@@ -10,34 +10,42 @@ using System.Windows.Forms;
 
 namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 {
-    public partial class timetableSearchResult : UserControl
+    public partial class trainRouteResult : UserControl
     {
         private List<List<Label>> labels;
         private List<PictureBox> backs;
-        public timetableSearchResult()
+        public trainRouteResult()
         {
             InitializeComponent();
             labels = new List<List<Label>>()
             {
                 new List<Label>()
                 {
-                    label1Train, label1Out, label1In
+                    label1Train, label1Out
                 },
                 new List<Label>()
                 {
-                    label2Train, label2Out, label2In
+                    label2Train, label2Out
                 },
                 new List<Label>()
                 {
-                    label3Train, label3Out, label3In
+                    label3Train, label3Out
                 },
                 new List<Label>()
                 {
-                    label4Train, label4Out, label4In
+                    label4Train, label4Out
                 },
                 new List<Label>()
                 {
-                    label5Train, label5Out, label5In
+                    label5Train, label5Out
+                },
+                new List<Label>()
+                {
+                    label6Train, label6Out
+                },
+                new List<Label>()
+                {
+                    label7Train, label7Out
                 }
             };
             backs = new List<PictureBox>()
@@ -46,17 +54,18 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                 label2Back,
                 label3Back,
                 label4Back,
-                label5Back
+                label5Back,
+                label6Back,
+                label7Back
             };
         }
 
-        public void FullfillLabels(TimetableResult timetable)
+        public void FullfillLabels(Timetable timetable)
         {
-            for(int i = 0; i<timetable.timetable.Count; i++)
+            for (int i = 0; i < timetable.Hours.Count; i++)
             {
-                labels[i][0].Text = DataBase.trains.Find(x => x.TrainID == timetable.timetable[i].TrainID).ToString();
-                labels[i][1].Text = timetable.timetable[i].Hours.Find(x => x.StationID == timetable.startStationID).ToString();
-                labels[i][2].Text = timetable.timetable[i].Hours.Find(x => x.StationID == timetable.endStationID).ToString();
+                labels[i][0].Text = DataBase.stations.Find(x => x.StationID == timetable.Hours[i].StationID).StationName.ToString();
+                labels[i][1].Text = timetable.Hours[i].ToString();
                 backs[i].Visible = true;
             }
         }

@@ -20,6 +20,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             InitializeComponent();
             DataBase.ImportAll();
             search1.InitAutoComplete();
+            trainRoute1.InitAutoTrainAutocomplete();
             btns = new List<Button>()
             {
                 btnSearchPanel,
@@ -61,7 +62,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             btnTrainPanel.BackColor = Color.FromArgb(246, 56, 137);
             btnTrainPanel.ForeColor = Color.White;
             btnTrainPanel.Image = white[1];
-            //timetableSearchResult1.BringToFront();
+            trainRoute1.BringToFront();
         }
 
         private void btnStationPanel_Click(object sender, EventArgs e)

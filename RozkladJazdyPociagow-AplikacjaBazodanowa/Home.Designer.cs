@@ -35,6 +35,7 @@
             this.btnSearchPanel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.trainRoute1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.trainRoute();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,12 +141,23 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // trainRoute1
+            // 
+            this.trainRoute1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.trainRoute1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.trainRoute1.Location = new System.Drawing.Point(252, 0);
+            this.trainRoute1.Margin = new System.Windows.Forms.Padding(0);
+            this.trainRoute1.Name = "trainRoute1";
+            this.trainRoute1.Size = new System.Drawing.Size(708, 540);
+            this.trainRoute1.TabIndex = 19;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(960, 540);
+            this.Controls.Add(this.trainRoute1);
             this.Controls.Add(this.search1);
             this.Controls.Add(this.btnStationPanel);
             this.Controls.Add(this.btnTrainPanel);
@@ -173,6 +185,7 @@
         private System.Windows.Forms.Button btnTrainPanel;
         private System.Windows.Forms.Button btnStationPanel;
         private search search1;
+        private trainRoute trainRoute1;
     }
 }
 

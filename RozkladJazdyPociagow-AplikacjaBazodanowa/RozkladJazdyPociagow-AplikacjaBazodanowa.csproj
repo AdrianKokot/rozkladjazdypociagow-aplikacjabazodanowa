@@ -84,6 +84,18 @@
     <Compile Include="timetableSearchResult.Designer.cs">
       <DependentUpon>timetableSearchResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="trainRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trainRoute.Designer.cs">
+      <DependentUpon>trainRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainRouteResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trainRouteResult.Designer.cs">
+      <DependentUpon>trainRouteResult.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="timetableSearchResult.resx">
       <DependentUpon>timetableSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainRoute.resx">
+      <DependentUpon>trainRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainRouteResult.resx">
+      <DependentUpon>trainRouteResult.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

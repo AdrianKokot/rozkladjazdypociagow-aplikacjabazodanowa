@@ -66,7 +66,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             else
             {
                 TimetableResult timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
-                if (timetable.msg == "OK")
+                if (timetable != null)
                 {
                     timetableSearchResult1.FullfillLabels(timetable);
                     timetableSearchResult1.Visible = true;

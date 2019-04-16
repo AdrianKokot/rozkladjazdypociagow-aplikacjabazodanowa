@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(search));
             this.firstCity = new System.Windows.Forms.TextBox();
-            this.changeCities = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dateDate = new System.Windows.Forms.DateTimePicker();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
@@ -40,20 +39,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.firstCityError = new System.Windows.Forms.ErrorProvider(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            this.firstCityBoxBack = new System.Windows.Forms.PictureBox();
             this.secondCity = new System.Windows.Forms.TextBox();
-            this.secondCityBoxBack = new System.Windows.Forms.PictureBox();
             this.secondCityError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.secondCityBoxBack = new System.Windows.Forms.PictureBox();
+            this.firstCityBoxBack = new System.Windows.Forms.PictureBox();
+            this.changeCities = new System.Windows.Forms.Button();
             this.timetableSearchResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.timetableSearchResult();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // firstCity
@@ -69,25 +69,10 @@
             this.firstCity.TabIndex = 0;
             this.firstCity.Validating += new System.ComponentModel.CancelEventHandler(this.firstCity_Validating);
             // 
-            // changeCities
-            // 
-            this.changeCities.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.changeCities.FlatAppearance.BorderSize = 0;
-            this.changeCities.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.changeCities.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.changeCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeCities.Image = ((System.Drawing.Image)(resources.GetObject("changeCities.Image")));
-            this.changeCities.Location = new System.Drawing.Point(435, 219);
-            this.changeCities.Margin = new System.Windows.Forms.Padding(0);
-            this.changeCities.Name = "changeCities";
-            this.changeCities.Size = new System.Drawing.Size(43, 43);
-            this.changeCities.TabIndex = 10;
-            this.changeCities.UseVisualStyleBackColor = true;
-            this.changeCities.Click += new System.EventHandler(this.changeCities_Click);
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
@@ -173,20 +158,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Wyszukaj połączenia";
             // 
-            // firstCityBoxBack
-            // 
-            this.firstCityBoxBack.BackColor = System.Drawing.Color.White;
-            this.firstCityBoxBack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.firstCityBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("firstCityBoxBack.Image")));
-            this.firstCityBoxBack.Location = new System.Drawing.Point(66, 167);
-            this.firstCityBoxBack.Margin = new System.Windows.Forms.Padding(0);
-            this.firstCityBoxBack.Name = "firstCityBoxBack";
-            this.firstCityBoxBack.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.firstCityBoxBack.Size = new System.Drawing.Size(355, 43);
-            this.firstCityBoxBack.TabIndex = 11;
-            this.firstCityBoxBack.TabStop = false;
-            this.firstCityBoxBack.Click += new System.EventHandler(this.firstCityBoxBack_Click);
-            // 
             // secondCity
             // 
             this.secondCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -199,6 +170,48 @@
             this.secondCity.Size = new System.Drawing.Size(316, 25);
             this.secondCity.TabIndex = 1;
             this.secondCity.Validating += new System.ComponentModel.CancelEventHandler(this.secondCity_Validating);
+            // 
+            // secondCityError
+            // 
+            this.secondCityError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.secondCityError.ContainerControl = this;
+            this.secondCityError.Icon = ((System.Drawing.Icon)(resources.GetObject("secondCityError.Icon")));
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(66, 458);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(270, 43);
+            this.exit.TabIndex = 5;
+            this.exit.Text = "Ponowne wyszukiwanie";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(232, 382);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(66, 382);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // secondCityBoxBack
             // 
@@ -214,46 +227,35 @@
             this.secondCityBoxBack.TabStop = false;
             this.secondCityBoxBack.Click += new System.EventHandler(this.secondCityBoxBack_Click);
             // 
-            // secondCityError
+            // firstCityBoxBack
             // 
-            this.secondCityError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.secondCityError.ContainerControl = this;
-            this.secondCityError.Icon = ((System.Drawing.Icon)(resources.GetObject("secondCityError.Icon")));
+            this.firstCityBoxBack.BackColor = System.Drawing.Color.White;
+            this.firstCityBoxBack.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.firstCityBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("firstCityBoxBack.Image")));
+            this.firstCityBoxBack.Location = new System.Drawing.Point(66, 167);
+            this.firstCityBoxBack.Margin = new System.Windows.Forms.Padding(0);
+            this.firstCityBoxBack.Name = "firstCityBoxBack";
+            this.firstCityBoxBack.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.firstCityBoxBack.Size = new System.Drawing.Size(355, 43);
+            this.firstCityBoxBack.TabIndex = 11;
+            this.firstCityBoxBack.TabStop = false;
+            this.firstCityBoxBack.Click += new System.EventHandler(this.firstCityBoxBack_Click);
             // 
-            // pictureBox1
+            // changeCities
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 382);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(232, 382);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.exit.ForeColor = System.Drawing.Color.White;
-            this.exit.Location = new System.Drawing.Point(66, 458);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(270, 43);
-            this.exit.TabIndex = 5;
-            this.exit.Text = "Ponowne wyszukiwanie";
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            this.changeCities.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.changeCities.FlatAppearance.BorderSize = 0;
+            this.changeCities.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.changeCities.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.changeCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeCities.Image = ((System.Drawing.Image)(resources.GetObject("changeCities.Image")));
+            this.changeCities.Location = new System.Drawing.Point(435, 219);
+            this.changeCities.Margin = new System.Windows.Forms.Padding(0);
+            this.changeCities.Name = "changeCities";
+            this.changeCities.Size = new System.Drawing.Size(43, 43);
+            this.changeCities.TabIndex = 10;
+            this.changeCities.UseVisualStyleBackColor = true;
+            this.changeCities.Click += new System.EventHandler(this.changeCities_Click);
             // 
             // timetableSearchResult1
             // 
@@ -291,11 +293,11 @@
             this.Name = "search";
             this.Size = new System.Drawing.Size(708, 540);
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

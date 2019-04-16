@@ -105,23 +105,6 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             return this.Hours[0].CompareTo(other.Hours[0]);
         }
-
-        public string ToString(int startStationID, int endStationID)
-        {
-            string days = "[";
-            foreach (int day in Days)
-            {
-                days += day.ToString() + ", ";
-            }
-            days += "], Hours: [";
-            foreach (StationTime hour in Hours)
-            {
-                if(hour.StationID == startStationID || hour.StationID == endStationID)
-                    days += hour.ToString() + ", ";
-            }
-            days += "]";
-            return string.Format("TrainID: {0}, PathID: {1}, Days: " + days, TrainID, PathID);
-        }
     }
 
     public class TimetableResult
@@ -129,14 +112,12 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public List<Timetable> timetable { get; set; }
         public int startStationID { get; set; }
         public int endStationID { get; set; }
-        public string msg { get; set; }
 
         public TimetableResult(int start = -1, int end = -1)
         {
             startStationID = start;
             endStationID = end;
             timetable = null;
-            msg = "E";
         }
     }
 
@@ -149,8 +130,15 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public override string ToString()
         {
             return ShortCompanyName;
-            //return string.Format("\"{0}\" {1}", ShortCompanyName, CompanyName);
         }
+    }
+
+    public class TrainDetails
+    {
+        public int TrainID { get; set; }
+        public int startStationID { get; set; }
+        public int endStationID { get; set; }
+        public TrainPath path { get; set; }
     }
 
     static class DataBase
@@ -206,34 +194,57 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             to = to.ToLower();
             Station startStation = stations.Find(x => x.StationName.ToLower() == from);                
             Station endStation = stations.Find(x => x.StationName.ToLower() == to);
-            if(startStation == null || endStation == null)
-            {
-                return new TimetableResult();
-            } else
+            if(startStation != null && endStation != null)
             {
                 TimetableResult result = new TimetableResult(startStation.StationID, endStation.StationID);
                 List<TrainPath> paths = trainPaths.FindAll(x => x.Stations.Contains(startStation.StationID) && x.Stations.Contains(endStation.StationID) && x.Stations.IndexOf(startStation.StationID) < x.Stations.IndexOf(endStation.StationID));
-                if(paths.Count < 1)
+                if(paths.Count > 0)
                 {
-                    return new TimetableResult();
-                } else
-                {
-                    //MessageBox.Show(paths.Count.ToString());
                     List<Timetable> schedule = timetable.FindAll(x => paths.Exists(z => z.PathID == x.PathID) && x.Hours.Exists(z => z.hour >= time.hour && z.StationID == startStation.StationID) && x.Days.Contains(day));
-                    if(schedule.Count < 1)
-                    {
-                        return new TimetableResult();
-                    } else
+                    if(schedule.Count > 0)
                     {
                         schedule.Sort();
-                        //MessageBox.Show(schedule.Count.ToString());
-                        result.msg = "OK";
                         result.timetable = schedule;
                         return result;
                     }
-                    
                 }
-            }               
+            }
+            return null;
+        }
+
+        static public Timetable FindTrainDetails(string trainName, string routeName)
+        {
+            Train train = trains.Find(x => x.TrainName.ToLower() == trainName.ToLower());
+            if(train != null)
+            {
+                List<TrainPath> paths = trainPaths.FindAll(x => train.PathIDs.Contains(x.PathID));
+                if(paths.Count > 0)
+                {
+                    string startStation, endStation;
+                    try
+                    {
+                        startStation = routeName.Split('-')[0].Trim();
+                        endStation = routeName.Split('-')[1].Trim();
+                    }
+                    catch (Exception e)
+                    {
+                        return null;
+                    }
+                    int startStationID = stations.Find(x => x.StationName.ToLower() == startStation.ToLower()).StationID;
+                    int endStationID = stations.Find(x => x.StationName.ToLower() == endStation.ToLower()).StationID;
+                    if(startStationID > 0 && endStationID > 0)
+                    {
+                        TrainPath path = paths.Find(x => x.Stations[0] == startStationID && x.Stations[x.Stations.Count - 1] == endStationID);
+                        if(path != null)
+                        {
+                            Timetable result = timetable.Find(x => x.TrainID == train.TrainID && x.PathID == path.PathID);
+                            if(result != null)
+                                return result;
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 }
