@@ -22,6 +22,21 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             exit.Visible = false;
         }
 
+        public void Reset()
+        {
+            firstCity.Text = "";
+            secondCity.Text = "";
+            firstCityValid = false;
+            secondCityValid = false;
+            firstCityError.SetError(firstCity, "");
+            secondCityError.SetError(secondCity, "");
+            timetableSearchResult1.Visible = false;
+            timetableSearchResult1.Reset();
+            exit.Visible = false;
+            dateDate.Value = DateTime.Now;
+            dateTime.Value = DateTime.Now;
+        }
+
         public void InitAutoComplete()
         {
             var autoComplete = new AutoCompleteStringCollection();
@@ -54,14 +69,18 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
-            if (!firstCityValid)
+            if(!firstCityValid&&!secondCityValid)
             {
-                this.ActiveControl = firstCity;
-            }
-            else if (!secondCityValid)
-            {
-                this.ActiveControl = secondCity;
+                if (!secondCityValid)
+                {
+                    this.ActiveControl = secondCity;
+                    secondCityError.SetError(secondCity, "Podana stacja nie istnieje w naszej bazie");
+                }
+                if (!firstCityValid)
+                {
+                    this.ActiveControl = firstCity;
+                    firstCityError.SetError(firstCity, "Podana stacja nie istnieje w naszej bazie");
+                }
             }
             else
             {

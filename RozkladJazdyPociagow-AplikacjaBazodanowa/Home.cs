@@ -21,6 +21,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             DataBase.ImportAll();
             search1.InitAutoComplete();
             trainRoute1.InitAutoTrainAutocomplete();
+            stationDetails1.InitAutoComplete();
             btns = new List<Button>()
             {
                 btnSearchPanel,
@@ -50,7 +51,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         private void searchBtn()
         {
             search1.BringToFront();
-            resetBtnsColors();
+            resetBtnsColorsAndPanels();
             btnSearchPanel.BackColor = Color.FromArgb(33, 94, 231);
             btnSearchPanel.ForeColor = Color.White;
             btnSearchPanel.Image = white[0];
@@ -58,7 +59,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnTrainPanel_Click(object sender, EventArgs e)
         {
-            resetBtnsColors();
+            resetBtnsColorsAndPanels();
             btnTrainPanel.BackColor = Color.FromArgb(246, 56, 137);
             btnTrainPanel.ForeColor = Color.White;
             btnTrainPanel.Image = white[1];
@@ -67,13 +68,14 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnStationPanel_Click(object sender, EventArgs e)
         {
-            resetBtnsColors();
+            resetBtnsColorsAndPanels();
             btnStationPanel.BackColor = Color.FromArgb(246, 162, 38);
             btnStationPanel.ForeColor = Color.White;
             btnStationPanel.Image = white[2];
+            stationDetails1.BringToFront();
         }
 
-        private void resetBtnsColors()
+        private void resetBtnsColorsAndPanels()
         {
             for(int i = 0; i<btns.Count; i++)
             {
@@ -81,6 +83,9 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                 btns[i].ForeColor = Color.Black;
                 btns[i].Image = black[i];
             }
+            search1.Reset();
+            trainRoute1.Reset();
+            stationDetails1.Reset();
         }
     }
 }

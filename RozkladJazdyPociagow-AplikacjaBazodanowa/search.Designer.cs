@@ -42,12 +42,12 @@
             this.secondCity = new System.Windows.Forms.TextBox();
             this.secondCityError = new System.Windows.Forms.ErrorProvider(this.components);
             this.exit = new System.Windows.Forms.Button();
+            this.timetableSearchResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.timetableSearchResult();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.secondCityBoxBack = new System.Windows.Forms.PictureBox();
             this.firstCityBoxBack = new System.Windows.Forms.PictureBox();
             this.changeCities = new System.Windows.Forms.Button();
-            this.timetableSearchResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.timetableSearchResult();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -192,9 +192,19 @@
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // timetableSearchResult1
+            // 
+            this.timetableSearchResult1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.timetableSearchResult1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.timetableSearchResult1.Location = new System.Drawing.Point(0, 0);
+            this.timetableSearchResult1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.timetableSearchResult1.Name = "timetableSearchResult1";
+            this.timetableSearchResult1.Size = new System.Drawing.Size(708, 540);
+            this.timetableSearchResult1.TabIndex = 17;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.clock;
             this.pictureBox2.Location = new System.Drawing.Point(232, 382);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 21);
@@ -205,7 +215,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.calendar;
             this.pictureBox1.Location = new System.Drawing.Point(66, 382);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(19, 21);
@@ -217,7 +227,7 @@
             // 
             this.secondCityBoxBack.BackColor = System.Drawing.Color.White;
             this.secondCityBoxBack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.secondCityBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("secondCityBoxBack.Image")));
+            this.secondCityBoxBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.pin;
             this.secondCityBoxBack.Location = new System.Drawing.Point(66, 272);
             this.secondCityBoxBack.Margin = new System.Windows.Forms.Padding(0);
             this.secondCityBoxBack.Name = "secondCityBoxBack";
@@ -231,7 +241,7 @@
             // 
             this.firstCityBoxBack.BackColor = System.Drawing.Color.White;
             this.firstCityBoxBack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.firstCityBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("firstCityBoxBack.Image")));
+            this.firstCityBoxBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.pin;
             this.firstCityBoxBack.Location = new System.Drawing.Point(66, 167);
             this.firstCityBoxBack.Margin = new System.Windows.Forms.Padding(0);
             this.firstCityBoxBack.Name = "firstCityBoxBack";
@@ -248,7 +258,7 @@
             this.changeCities.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.changeCities.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.changeCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeCities.Image = ((System.Drawing.Image)(resources.GetObject("changeCities.Image")));
+            this.changeCities.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.change;
             this.changeCities.Location = new System.Drawing.Point(435, 219);
             this.changeCities.Margin = new System.Windows.Forms.Padding(0);
             this.changeCities.Name = "changeCities";
@@ -256,16 +266,6 @@
             this.changeCities.TabIndex = 10;
             this.changeCities.UseVisualStyleBackColor = true;
             this.changeCities.Click += new System.EventHandler(this.changeCities_Click);
-            // 
-            // timetableSearchResult1
-            // 
-            this.timetableSearchResult1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.timetableSearchResult1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.timetableSearchResult1.Location = new System.Drawing.Point(0, 0);
-            this.timetableSearchResult1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.timetableSearchResult1.Name = "timetableSearchResult1";
-            this.timetableSearchResult1.Size = new System.Drawing.Size(708, 540);
-            this.timetableSearchResult1.TabIndex = 17;
             // 
             // search
             // 

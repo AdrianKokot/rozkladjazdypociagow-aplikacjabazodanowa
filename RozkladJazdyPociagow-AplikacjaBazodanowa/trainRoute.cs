@@ -20,10 +20,26 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             InitializeComponent();
         }
 
+        public void Reset()
+        {
+            trainSearchValid = false;
+            stationSearchValid = false;
+            exit.Visible = false;
+            trainRouteResult1.Visible = false;
+            trainRouteResult1.Reset();
+            trainSearch.SelectedIndex = -1;
+            trainSearch.Text = "";
+            stationSearch.SelectedIndex = -1;
+            stationSearch.Text = "";
+            errorStation.SetError(stationSearch, "");
+            errorTrain.SetError(trainSearch, "");
+        }
+
         public void InitAutoTrainAutocomplete ()
         {
             var autoComplete = new AutoCompleteStringCollection();
             List<string> trains = DataBase.trains.Select(x => x.TrainName).ToList();
+            trains.Sort();
             autoComplete.AddRange(trains.ToArray());
             trainSearch.AutoCompleteCustomSource = autoComplete;
             trainSearch.Items.AddRange(trains.ToArray());
@@ -35,6 +51,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             Train train = DataBase.trains.Find(y => y.TrainName.ToLower() == trainSearch.Text.ToLower());
             List<TrainPath> pathsIDs = DataBase.trainPaths.FindAll(x => train.PathIDs.Contains(x.PathID));
             routes = pathsIDs.Select(x => DataBase.stations.Find(z => z.StationID == x.Stations.First()).StationName + " - " + DataBase.stations.Find(z => z.StationID == x.Stations.Last()).StationName).Distinct().ToList();
+            routes.Sort();
             autoComplete.AddRange(routes.ToArray());
             stationSearch.AutoCompleteCustomSource = autoComplete;
             stationSearch.Items.Clear();
@@ -43,13 +60,18 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!trainSearchValid)
+            if (!trainSearchValid && !stationSearchValid)
             {
-                this.ActiveControl = trainSearch;
-            }
-            else if (!stationSearchValid)
-            {
-                this.ActiveControl = stationSearch;
+                if (!stationSearchValid)
+                {
+                    this.ActiveControl = stationSearch;
+                    errorStation.SetError(stationSearch, "Podana trasa nie istnieje w naszej bazie");
+                }
+                if (!trainSearchValid)
+                {
+                    this.ActiveControl = trainSearch;
+                    errorTrain.SetError(trainSearch, "Podany pociąg nie istnieje w naszej bazie");
+                }
             }
             else
             {
@@ -68,7 +90,6 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                 {
                     MessageBox.Show("Przepraszamy ale nie udalo się znaleźć pociągu lub trasy");
                 }
-                
             }
         }
 
@@ -116,7 +137,13 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         private void trainSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
+            stationSearchValid = false;
             stationSearch.SelectedIndex = -1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = stationSearch;
         }
     }
 }

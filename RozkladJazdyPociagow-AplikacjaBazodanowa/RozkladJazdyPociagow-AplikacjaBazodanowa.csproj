@@ -12,7 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Adrian\Desktop\publisk\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -78,6 +78,18 @@
     <Compile Include="search.Designer.cs">
       <DependentUpon>search.cs</DependentUpon>
     </Compile>
+    <Compile Include="stationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="stationDetails.Designer.cs">
+      <DependentUpon>stationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stationDetailsResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="stationDetailsResult.Designer.cs">
+      <DependentUpon>stationDetailsResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="timetableSearchResult.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </Compile>
     <EmbeddedResource Include="search.resx">
       <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stationDetails.resx">
+      <DependentUpon>stationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stationDetailsResult.resx">
+      <DependentUpon>stationDetailsResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timetableSearchResult.resx">
       <DependentUpon>timetableSearchResult.cs</DependentUpon>
@@ -167,6 +185,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trainWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rozkladJazdyColors2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace RozkladJazdyPociagow_AplikacjaBazodanowa
@@ -133,14 +134,6 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         }
     }
 
-    public class TrainDetails
-    {
-        public int TrainID { get; set; }
-        public int startStationID { get; set; }
-        public int endStationID { get; set; }
-        public TrainPath path { get; set; }
-    }
-
     static class DataBase
     {
         public static List<Station> stations;
@@ -151,31 +144,31 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 
         static private void ImportStations()
         {
-            var jsonData = File.ReadAllText(@"..\..\..\DB\stations.txt", Encoding.UTF8);
+            var jsonData = File.ReadAllText(@"DB\stations.txt", Encoding.UTF8);
             stations = JsonConvert.DeserializeObject<List<Station>>(jsonData);
         }
 
         static private void ImportTrains()
         {
-            var jsonData = File.ReadAllText(@"..\..\..\DB\trains.txt", Encoding.UTF8);
+            var jsonData = File.ReadAllText(@"DB\trains.txt", Encoding.UTF8);
             trains = JsonConvert.DeserializeObject<List<Train>>(jsonData);
         }
 
         static private void ImportTrainPaths()
         {
-            var jsonData = File.ReadAllText(@"..\..\..\DB\trainpaths.txt", Encoding.UTF8);
+            var jsonData = File.ReadAllText(@"DB\trainpaths.txt", Encoding.UTF8);
             trainPaths = JsonConvert.DeserializeObject<List<TrainPath>>(jsonData);
         }
 
         static private void ImportTimetables()
         {
-            var jsonData = File.ReadAllText(@"..\..\..\DB\timetables.txt", Encoding.UTF8);
+            var jsonData = File.ReadAllText(@"DB\timetables.txt", Encoding.UTF8);
             timetable = JsonConvert.DeserializeObject<List<Timetable>>(jsonData);
         }
 
         static private void ImportCompanies()
         {
-            var jsonData = File.ReadAllText(@"..\..\..\DB\companies.txt", Encoding.UTF8);
+            var jsonData = File.ReadAllText(@"DB\companies.txt", Encoding.UTF8);
             companies = JsonConvert.DeserializeObject<List<Company>>(jsonData);
         }
 
@@ -241,6 +234,26 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
                             if(result != null)
                                 return result;
                         }
+                    }
+                }
+            }
+            return null;
+        }
+
+        static public List<string> FindStationDetails(string stationName)
+        {
+            Station station = stations.Find(x => x.StationName.ToLower() == stationName.ToLower());
+            if(station != null)
+            {
+                List<TrainPath> paths = trainPaths.FindAll(x => x.Stations.Contains(station.StationID));
+                if(paths.Count > 0)
+                {
+                    List<Train> trainsResult = trains.FindAll(x => x.PathIDs.Exists(z => paths.Exists(y => y.PathID == z)));
+                    if(trainsResult.Count > 0)
+                    {
+                        List<string> result = trainsResult.Select(x => x.ToString()).ToList();
+                        result.Sort();
+                        return result;
                     }
                 }
             }
