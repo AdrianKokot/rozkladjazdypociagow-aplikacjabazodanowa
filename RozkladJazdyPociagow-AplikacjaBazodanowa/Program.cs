@@ -259,5 +259,21 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             }
             return null;
         }
+
+        static public List<string> FindCompanysTrains(string companyName)
+        {
+            Company company = companies.Find(x => x.CompanyName.ToLower() == companyName.ToLower());
+            if(company != null)
+            {
+                List<Train> companysTrains = trains.FindAll(x => x.CompanyID == company.CompanyID);
+                if(companysTrains != null)
+                {
+                    List<string> result = companysTrains.Select(x => x.TrainName).ToList();
+                    result.Sort();
+                    return result;
+                }
+            }
+            return null;
+        }
     }
 }

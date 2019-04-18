@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="companyTrains.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="companyTrains.Designer.cs">
+      <DependentUpon>companyTrains.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="trainRouteResult.Designer.cs">
       <DependentUpon>trainRouteResult.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="companyTrains.resx">
+      <DependentUpon>companyTrains.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +209,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staffBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staffWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

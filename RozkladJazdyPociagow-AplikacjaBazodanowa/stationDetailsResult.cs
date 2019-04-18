@@ -70,6 +70,8 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             if (trains.Count <= 8)
                 this.AutoScroll = false;
+            else
+                this.AutoScroll = true;
             for(int i = 0; i<trains.Count; i++)
             {
                 labels[i].Text = trains[i];

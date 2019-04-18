@@ -22,23 +22,27 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             search1.InitAutoComplete();
             trainRoute1.InitAutoTrainAutocomplete();
             stationDetails1.InitAutoComplete();
+            companyTrains1.InitAutocomplete();
             btns = new List<Button>()
             {
                 btnSearchPanel,
                 btnTrainPanel,
-                btnStationPanel
+                btnStationPanel,
+                btnCompanyPanel
             };
             black = new List<Bitmap>
             {
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.searchBlack,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.routeBlack,
-                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainBlack
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainBlack,
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffBlack
             };
             white = new List<Bitmap>
             {
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.searchWhite,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.routeWhite,
-                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainWhite
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainWhite,
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffWhite
             };
             searchBtn();
         }
@@ -86,6 +90,16 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             search1.Reset();
             trainRoute1.Reset();
             stationDetails1.Reset();
+            companyTrains1.Reset();
+        }
+
+        private void btnCompanyPanel_Click(object sender, EventArgs e)
+        {
+            resetBtnsColorsAndPanels();
+            btnCompanyPanel.BackColor = Color.FromArgb(33, 94, 231);
+            btnCompanyPanel.ForeColor = Color.White;
+            btnCompanyPanel.Image = white[3];
+            companyTrains1.BringToFront();
         }
     }
 }

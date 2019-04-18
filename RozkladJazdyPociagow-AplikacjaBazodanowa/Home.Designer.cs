@@ -29,26 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.search1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.search();
+            this.btnCompanyPanel = new System.Windows.Forms.Button();
             this.btnStationPanel = new System.Windows.Forms.Button();
             this.btnTrainPanel = new System.Windows.Forms.Button();
             this.btnSearchPanel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.trainRoute1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.trainRoute();
             this.stationDetails1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.stationDetails();
+            this.trainRoute1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.trainRoute();
+            this.search1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.search();
+            this.companyTrains1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.companyTrains();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // search1
+            // btnCompanyPanel
             // 
-            this.search1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.search1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.search1.Location = new System.Drawing.Point(252, 0);
-            this.search1.Margin = new System.Windows.Forms.Padding(0);
-            this.search1.Name = "search1";
-            this.search1.Size = new System.Drawing.Size(708, 540);
-            this.search1.TabIndex = 18;
+            this.btnCompanyPanel.BackColor = System.Drawing.Color.White;
+            this.btnCompanyPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCompanyPanel.FlatAppearance.BorderSize = 0;
+            this.btnCompanyPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompanyPanel.Font = new System.Drawing.Font("Google Sans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnCompanyPanel.ForeColor = System.Drawing.Color.Black;
+            this.btnCompanyPanel.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffBlack;
+            this.btnCompanyPanel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompanyPanel.Location = new System.Drawing.Point(0, 393);
+            this.btnCompanyPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCompanyPanel.Name = "btnCompanyPanel";
+            this.btnCompanyPanel.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCompanyPanel.Size = new System.Drawing.Size(252, 50);
+            this.btnCompanyPanel.TabIndex = 21;
+            this.btnCompanyPanel.Text = " Pociągi przewoźników";
+            this.btnCompanyPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompanyPanel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompanyPanel.UseVisualStyleBackColor = false;
+            this.btnCompanyPanel.Click += new System.EventHandler(this.btnCompanyPanel_Click);
             // 
             // btnStationPanel
             // 
@@ -142,16 +156,6 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // trainRoute1
-            // 
-            this.trainRoute1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.trainRoute1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.trainRoute1.Location = new System.Drawing.Point(252, 0);
-            this.trainRoute1.Margin = new System.Windows.Forms.Padding(0);
-            this.trainRoute1.Name = "trainRoute1";
-            this.trainRoute1.Size = new System.Drawing.Size(708, 540);
-            this.trainRoute1.TabIndex = 19;
-            // 
             // stationDetails1
             // 
             this.stationDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -162,12 +166,43 @@
             this.stationDetails1.Size = new System.Drawing.Size(708, 540);
             this.stationDetails1.TabIndex = 20;
             // 
+            // trainRoute1
+            // 
+            this.trainRoute1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.trainRoute1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.trainRoute1.Location = new System.Drawing.Point(252, 0);
+            this.trainRoute1.Margin = new System.Windows.Forms.Padding(0);
+            this.trainRoute1.Name = "trainRoute1";
+            this.trainRoute1.Size = new System.Drawing.Size(708, 540);
+            this.trainRoute1.TabIndex = 19;
+            // 
+            // search1
+            // 
+            this.search1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.search1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.search1.Location = new System.Drawing.Point(252, 0);
+            this.search1.Margin = new System.Windows.Forms.Padding(0);
+            this.search1.Name = "search1";
+            this.search1.Size = new System.Drawing.Size(708, 540);
+            this.search1.TabIndex = 18;
+            // 
+            // companyTrains1
+            // 
+            this.companyTrains1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.companyTrains1.Location = new System.Drawing.Point(252, 0);
+            this.companyTrains1.Margin = new System.Windows.Forms.Padding(0);
+            this.companyTrains1.Name = "companyTrains1";
+            this.companyTrains1.Size = new System.Drawing.Size(708, 540);
+            this.companyTrains1.TabIndex = 22;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(960, 540);
+            this.Controls.Add(this.companyTrains1);
+            this.Controls.Add(this.btnCompanyPanel);
             this.Controls.Add(this.stationDetails1);
             this.Controls.Add(this.trainRoute1);
             this.Controls.Add(this.search1);
@@ -199,6 +234,8 @@
         private search search1;
         private trainRoute trainRoute1;
         private stationDetails stationDetails1;
+        private System.Windows.Forms.Button btnCompanyPanel;
+        private companyTrains companyTrains1;
     }
 }
 

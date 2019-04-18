@@ -35,9 +35,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.stationSearchError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.exit = new System.Windows.Forms.Button();
             this.stationSearchBack = new System.Windows.Forms.PictureBox();
             this.stationDetailsResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.stationDetailsResult();
-            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stationSearchError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationSearchBack)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,22 @@
             this.stationSearchError.ContainerControl = this;
             this.stationSearchError.Icon = ((System.Drawing.Icon)(resources.GetObject("stationSearchError.Icon")));
             // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(66, 483);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(279, 43);
+            this.exit.TabIndex = 23;
+            this.exit.Text = "Ponowne wyszukiwanie";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Visible = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // stationSearchBack
             // 
             this.stationSearchBack.BackColor = System.Drawing.Color.White;
@@ -115,30 +131,15 @@
             // stationDetailsResult1
             // 
             this.stationDetailsResult1.AutoScroll = true;
+            this.stationDetailsResult1.AutoScrollMargin = new System.Drawing.Size(0, 28);
             this.stationDetailsResult1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.stationDetailsResult1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.stationDetailsResult1.Location = new System.Drawing.Point(0, 1);
+            this.stationDetailsResult1.Location = new System.Drawing.Point(0, 0);
             this.stationDetailsResult1.Margin = new System.Windows.Forms.Padding(6);
             this.stationDetailsResult1.Name = "stationDetailsResult1";
             this.stationDetailsResult1.Size = new System.Drawing.Size(708, 478);
             this.stationDetailsResult1.TabIndex = 22;
             this.stationDetailsResult1.Visible = false;
-            // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
-            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
-            this.exit.ForeColor = System.Drawing.Color.White;
-            this.exit.Location = new System.Drawing.Point(66, 483);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(279, 43);
-            this.exit.TabIndex = 23;
-            this.exit.Text = "Ponowne wyszukiwanie";
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Visible = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // stationDetails
             // 

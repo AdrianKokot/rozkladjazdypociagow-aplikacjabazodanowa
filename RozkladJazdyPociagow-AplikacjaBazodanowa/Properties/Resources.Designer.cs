@@ -163,6 +163,26 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap staffBlack {
+            get {
+                object obj = ResourceManager.GetObject("staffBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap staffWhite {
+            get {
+                object obj = ResourceManager.GetObject("staffWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trainBlack {
             get {
                 object obj = ResourceManager.GetObject("trainBlack", resourceCulture);
