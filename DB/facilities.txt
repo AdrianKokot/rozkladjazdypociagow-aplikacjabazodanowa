@@ -1,0 +1,26 @@
+﻿[
+    {
+        "FacilityID": 1,
+        "FacilityName": "Klimatyzacja"
+    },
+    {
+        "FacilityID": 2,
+        "FacilityName": "Darmowe Wi-fi"
+    },
+    {
+        "FacilityID": 3,
+        "FacilityName": "Wagony jadalne"
+    },
+    {
+        "FacilityID": 4,
+        "FacilityName": "Zakaz palenia"
+    },
+    {
+        "FacilityID": 5,
+        "FacilityName": "Rezerwacja miejsc"
+    },
+    {
+        "FacilityID": 6,
+        "FacilityName": "Wagon rowerowy"
+    }
+]

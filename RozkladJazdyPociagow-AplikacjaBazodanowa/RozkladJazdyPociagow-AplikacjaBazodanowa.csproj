@@ -114,6 +114,12 @@
     <Compile Include="trainRouteResult.Designer.cs">
       <DependentUpon>trainRouteResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="trainsFacilities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trainsFacilities.Designer.cs">
+      <DependentUpon>trainsFacilities.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="companyTrains.resx">
       <DependentUpon>companyTrains.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trainRouteResult.resx">
       <DependentUpon>trainRouteResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainsFacilities.resx">
+      <DependentUpon>trainsFacilities.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -215,6 +224,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\staffWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarkBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarkWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

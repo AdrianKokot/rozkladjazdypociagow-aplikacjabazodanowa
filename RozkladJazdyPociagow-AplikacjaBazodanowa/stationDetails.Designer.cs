@@ -61,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(66, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 25);
+            this.label1.Size = new System.Drawing.Size(133, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Nazwa stacji";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,7 +88,7 @@
             this.label4.Location = new System.Drawing.Point(63, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(326, 50);
+            this.label4.Size = new System.Drawing.Size(330, 50);
             this.label4.TabIndex = 19;
             this.label4.Text = "Pociągi na stacji";
             // 
@@ -172,7 +172,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider stationSearchError;
-        private stationDetailsResult stationDetailsResult1;
         private System.Windows.Forms.Button exit;
+        private stationDetailsResult stationDetailsResult1;
     }
 }

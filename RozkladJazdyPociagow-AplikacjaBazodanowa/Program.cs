@@ -31,11 +31,18 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public int CompanyID { get; set; }
         public string TrainName { get; set; }
         public List<int> PathIDs { get; set; }
+        public List<int> FacilitiesIDs { get; set; }
 
         public override string ToString()
         {
             return string.Format("{0}, \"{1}\"", DataBase.companies.Find(x => x.CompanyID == this.CompanyID).ToString(), TrainName);
         }
+    }
+
+    public class Facilities
+    {
+        public int FacilityID { get; set; }
+        public string FacilityName { get; set; }
     }
 
     public class TrainPath
@@ -141,6 +148,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public static List<TrainPath> trainPaths;
         public static List<Timetable> timetable;
         public static List<Company> companies;
+        public static List<Facilities> facilities;
 
         static private void ImportStations()
         {
@@ -172,6 +180,12 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             companies = JsonConvert.DeserializeObject<List<Company>>(jsonData);
         }
 
+        static private void ImportFacilities()
+        {
+            var jsonData = File.ReadAllText(@"DB\facilities.txt", Encoding.UTF8);
+            facilities = JsonConvert.DeserializeObject<List<Facilities>>(jsonData);
+        }
+
         static public void ImportAll()
         {
             ImportStations();
@@ -179,6 +193,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             ImportTrainPaths();
             ImportTimetables();
             ImportCompanies();
+            ImportFacilities();
         }
 
         static public TimetableResult FindRoute(string from, string to, StationTime time, int day)
@@ -266,9 +281,25 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             if(company != null)
             {
                 List<Train> companysTrains = trains.FindAll(x => x.CompanyID == company.CompanyID);
-                if(companysTrains != null)
+                if(companysTrains.Count > 0)
                 {
                     List<string> result = companysTrains.Select(x => x.TrainName).ToList();
+                    result.Sort();
+                    return result;
+                }
+            }
+            return null;
+        }
+
+        static public List<string> FindTrainsFacilities(string trainName)
+        {
+            Train train = trains.Find(x => x.ToString().ToLower() == trainName.ToLower());
+            if(train != null)
+            {
+                List<Facilities> trainsFacilities = facilities.FindAll(x => train.FacilitiesIDs.Contains(x.FacilityID));
+                if(trainsFacilities.Count > 0)
+                {
+                    List<string> result = trainsFacilities.Select(x => x.FacilityName).ToList();
                     result.Sort();
                     return result;
                 }

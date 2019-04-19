@@ -3,114 +3,133 @@
         "TrainID": 1,
         "CompanyID": 1,
 	"TrainName": "POMORZANIN",
-	"PathIDs": [1,5]
+	"PathIDs": [1,5],
+	"FacilitiesIDs": [1,3,4,5]
     },
     {
         "TrainID": 2,
         "CompanyID": 3,
 	"TrainName": "PKM1",
-	"PathIDs": [2,4]
+	"PathIDs": [2,4],
+	"FacilitiesIDs": [1,4,6]
     },
     {
         "TrainID": 3,
         "CompanyID": 1,
 	"TrainName": "BARBAKAN",
-	"PathIDs": [1,2,4]
+	"PathIDs": [1,2,4],
+	"FacilitiesIDs": [1,4,5]
     },
     {
         "TrainID": 4,
         "CompanyID": 1,
 	"TrainName": "WARTA",
-	"PathIDs": [3,6]
+	"PathIDs": [3,6],
+	"FacilitiesIDs": [1,4,5]
     },
     {
         "TrainID": 5,
         "CompanyID": 3,
 	"TrainName": "PKM2",
-	"PathIDs": [7,8]
+	"PathIDs": [7,8],
+	"FacilitiesIDs": [1,4,6]
     },
     {
         "TrainID": 6,
         "CompanyID": 3,
 	"TrainName": "PKM4",
-	"PathIDs": [7]
+	"PathIDs": [7],
+	"FacilitiesIDs": [1,2,4,6]
     },
     {
         "TrainID": 7,
         "CompanyID": 2,
 	"TrainName": "KAMIEŃCZUK",
-	"PathIDs": [9,11]
+	"PathIDs": [9,11],
+	"FacilitiesIDs": [1,2,4]
     },
     {
         "TrainID": 8,
         "CompanyID": 1,
 	"TrainName": "HALNY",
-	"PathIDs": [10,12]
+	"PathIDs": [10,12],
+	"FacilitiesIDs": [1,3,4,5]
     },
     {
         "TrainID": 9,
         "CompanyID": 2,
 	"TrainName": "WILCZAK",
-	"PathIDs": [9]
+	"PathIDs": [9],
+	"FacilitiesIDs": [1,2,4]
     },
     {
         "TrainID": 10,
         "CompanyID": 1,
 	"TrainName": "MIESZKO",
-	"PathIDs": [12]
+	"PathIDs": [12],
+	"FacilitiesIDs": [1,4,5]
     },
     {
         "TrainID": 11,
         "CompanyID": 3,
 	"TrainName": "PKM3",
-	"PathIDs": [13,14]
+	"PathIDs": [13,14],
+	"FacilitiesIDs": [1,4,6]
     },
     {
         "TrainID": 12,
         "CompanyID": 3,
 	"TrainName": "RZEPICHA",
-	"PathIDs": [13,14]
+	"PathIDs": [13,14],
+	"FacilitiesIDs": [1,4,6]
     },
     {
         "TrainID": 13,
         "CompanyID": 2,
 	"TrainName": "CHOCHLIK",
-	"PathIDs": [15,16]
+	"PathIDs": [15,16],
+	"FacilitiesIDs": [1,2,4]
     },
     {
         "TrainID": 14,
         "CompanyID": 1,
 	"TrainName": "SZKUNER",
-	"PathIDs": [17,18]
+	"PathIDs": [17,18],
+	"FacilitiesIDs": [1,4,5]
     },
     {
         "TrainID": 15,
         "CompanyID": 2,
 	"TrainName": "GWAREK",
-	"PathIDs": [15,16]
+	"PathIDs": [15,16],
+	"FacilitiesIDs": [1,2,4]
     },
     {
         "TrainID": 16,
         "CompanyID": 1,
 	"TrainName": "RADEK",
-	"PathIDs": [17,18]
+	"PathIDs": [17,18],
+	"FacilitiesIDs": [1,3,4,5]
     },
     {
         "TrainID": 17,
         "CompanyID": 1,
 	"TrainName": "ROZEWIE",
-	"PathIDs": [19,20]
+	"PathIDs": [19,20],
+	"FacilitiesIDs": [1,4,5]
     },
     {
         "TrainID": 18,
         "CompanyID": 2,
 	"TrainName": "CHOCHOŁ",
-	"PathIDs": [21,22]
+	"PathIDs": [21,22],
+	"FacilitiesIDs": [1,2,4]
     },
     {
         "TrainID": 19,
         "CompanyID": 2,
 	"TrainName": "DMOWSKI",
-	"PathIDs": [21,22]
+	"PathIDs": [21,22],
+	"FacilitiesIDs": [1,2,4]
     }
 ]

@@ -23,26 +23,30 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             trainRoute1.InitAutoTrainAutocomplete();
             stationDetails1.InitAutoComplete();
             companyTrains1.InitAutocomplete();
+            trainsFacilities1.InitAutocomplete();
             btns = new List<Button>()
             {
                 btnSearchPanel,
                 btnTrainPanel,
                 btnStationPanel,
-                btnCompanyPanel
+                btnCompanyPanel,
+                btnTrainsFacilitiesPanel
             };
             black = new List<Bitmap>
             {
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.searchBlack,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.routeBlack,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainBlack,
-                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffBlack
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffBlack,
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.bookmarkBlack
             };
             white = new List<Bitmap>
             {
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.searchWhite,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.routeWhite,
                 global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainWhite,
-                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffWhite
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffWhite,
+                global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.bookmarkWhite
             };
             searchBtn();
         }
@@ -91,6 +95,7 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             trainRoute1.Reset();
             stationDetails1.Reset();
             companyTrains1.Reset();
+            trainsFacilities1.Reset();
         }
 
         private void btnCompanyPanel_Click(object sender, EventArgs e)
@@ -100,6 +105,15 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             btnCompanyPanel.ForeColor = Color.White;
             btnCompanyPanel.Image = white[3];
             companyTrains1.BringToFront();
+        }
+
+        private void BtnTrainsFacilitiesPanel_Click(object sender, EventArgs e)
+        {
+            resetBtnsColorsAndPanels();
+            btnTrainsFacilitiesPanel.BackColor = Color.FromArgb(246, 56, 137);
+            btnTrainsFacilitiesPanel.ForeColor = Color.White;
+            btnTrainsFacilitiesPanel.Image = white[4];
+            trainsFacilities1.BringToFront();
         }
     }
 }

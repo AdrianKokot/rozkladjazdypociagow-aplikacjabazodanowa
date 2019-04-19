@@ -43,17 +43,33 @@
             this.secondCityError = new System.Windows.Forms.ErrorProvider(this.components);
             this.exit = new System.Windows.Forms.Button();
             this.timetableSearchResult1 = new RozkladJazdyPociagow_AplikacjaBazodanowa.timetableSearchResult();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.secondCityBoxBack = new System.Windows.Forms.PictureBox();
             this.firstCityBoxBack = new System.Windows.Forms.PictureBox();
             this.changeCities = new System.Windows.Forms.Button();
+            this.dateDateBack = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDateBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // firstCity
@@ -90,7 +106,7 @@
             this.dateDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateDate.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateDate.Location = new System.Drawing.Point(88, 377);
+            this.dateDate.Location = new System.Drawing.Point(105, 377);
             this.dateDate.Margin = new System.Windows.Forms.Padding(0);
             this.dateDate.Name = "dateDate";
             this.dateDate.Size = new System.Drawing.Size(135, 32);
@@ -98,16 +114,18 @@
             // 
             // dateTime
             // 
+            this.dateTime.CalendarFont = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateTime.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTime.CustomFormat = " HH:mm";
+            this.dateTime.CustomFormat = " HH : mm";
+            this.dateTime.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime.Location = new System.Drawing.Point(256, 377);
+            this.dateTime.Location = new System.Drawing.Point(292, 377);
             this.dateTime.Margin = new System.Windows.Forms.Padding(0);
             this.dateTime.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
             this.dateTime.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
             this.dateTime.Name = "dateTime";
             this.dateTime.ShowUpDown = true;
-            this.dateTime.Size = new System.Drawing.Size(80, 32);
+            this.dateTime.Size = new System.Drawing.Size(90, 32);
             this.dateTime.TabIndex = 3;
             // 
             // label1
@@ -116,7 +134,7 @@
             this.label1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(66, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 25);
+            this.label1.Size = new System.Drawing.Size(192, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Stacja początkowa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,7 +145,7 @@
             this.label2.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(66, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Stacja końcowa";
             // 
@@ -137,7 +155,7 @@
             this.label3.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(66, 347);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 25);
+            this.label3.Size = new System.Drawing.Size(231, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Data i godzina odjazdu";
             // 
@@ -154,7 +172,7 @@
             this.label4.Location = new System.Drawing.Point(63, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(419, 50);
+            this.label4.Size = new System.Drawing.Size(424, 50);
             this.label4.TabIndex = 10;
             this.label4.Text = "Wyszukaj połączenia";
             // 
@@ -202,27 +220,6 @@
             this.timetableSearchResult1.Size = new System.Drawing.Size(708, 540);
             this.timetableSearchResult1.TabIndex = 17;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.clock;
-            this.pictureBox2.Location = new System.Drawing.Point(232, 382);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 382);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // secondCityBoxBack
             // 
             this.secondCityBoxBack.BackColor = System.Drawing.Color.White;
@@ -267,15 +264,132 @@
             this.changeCities.UseVisualStyleBackColor = true;
             this.changeCities.Click += new System.EventHandler(this.changeCities_Click);
             // 
+            // dateDateBack
+            // 
+            this.dateDateBack.BackColor = System.Drawing.Color.White;
+            this.dateDateBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateDateBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.calendar;
+            this.dateDateBack.Location = new System.Drawing.Point(66, 372);
+            this.dateDateBack.Margin = new System.Windows.Forms.Padding(0);
+            this.dateDateBack.Name = "dateDateBack";
+            this.dateDateBack.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.dateDateBack.Size = new System.Drawing.Size(174, 43);
+            this.dateDateBack.TabIndex = 18;
+            this.dateDateBack.TabStop = false;
+            this.dateDateBack.Click += new System.EventHandler(this.DateDateBack_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(105, 377);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 1);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(105, 408);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(135, 1);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Location = new System.Drawing.Point(105, 377);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1, 32);
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Location = new System.Drawing.Point(239, 377);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1, 32);
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.clock;
+            this.pictureBox6.Location = new System.Drawing.Point(253, 372);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.pictureBox6.Size = new System.Drawing.Size(129, 43);
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.PictureBox6_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(292, 408);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 1);
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Location = new System.Drawing.Point(292, 377);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(90, 1);
+            this.pictureBox7.TabIndex = 25;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Location = new System.Drawing.Point(381, 377);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1, 32);
+            this.pictureBox8.TabIndex = 26;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Location = new System.Drawing.Point(292, 377);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(1, 32);
+            this.pictureBox9.TabIndex = 27;
+            this.pictureBox9.TabStop = false;
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.Controls.Add(this.exit);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dateTime);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dateDate);
+            this.Controls.Add(this.dateDateBack);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.secondCity);
             this.Controls.Add(this.secondCityBoxBack);
             this.Controls.Add(this.firstCity);
@@ -284,7 +398,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.changeCities);
             this.Controls.Add(this.timetableSearchResult1);
@@ -294,10 +407,18 @@
             this.Size = new System.Drawing.Size(708, 540);
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDateBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,9 +440,17 @@
         private System.Windows.Forms.TextBox secondCity;
         private System.Windows.Forms.PictureBox secondCityBoxBack;
         private System.Windows.Forms.ErrorProvider secondCityError;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button exit;
         private timetableSearchResult timetableSearchResult1;
+        private System.Windows.Forms.PictureBox dateDateBack;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -126,5 +126,15 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             this.ActiveControl = secondCity;
         }
+
+        private void PictureBox6_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = dateTime;
+        }
+
+        private void DateDateBack_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = dateDate;
+        }
     }
 }
