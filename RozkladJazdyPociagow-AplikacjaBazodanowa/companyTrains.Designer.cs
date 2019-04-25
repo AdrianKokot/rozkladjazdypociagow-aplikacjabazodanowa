@@ -102,7 +102,7 @@
             // 
             this.companySearchBack.BackColor = System.Drawing.Color.White;
             this.companySearchBack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.companySearchBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.pin;
+            this.companySearchBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.staffBlack;
             this.companySearchBack.Location = new System.Drawing.Point(66, 167);
             this.companySearchBack.Margin = new System.Windows.Forms.Padding(0);
             this.companySearchBack.Name = "companySearchBack";

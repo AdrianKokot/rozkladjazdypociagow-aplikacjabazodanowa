@@ -116,7 +116,7 @@
             // 
             this.dateTime.CalendarFont = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateTime.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTime.CustomFormat = " HH : mm";
+            this.dateTime.CustomFormat = " HH:mm";
             this.dateTime.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTime.Location = new System.Drawing.Point(292, 377);
@@ -134,7 +134,7 @@
             this.label1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(66, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.Size = new System.Drawing.Size(202, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Stacja początkowa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             this.label2.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(66, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.Size = new System.Drawing.Size(170, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Stacja końcowa";
             // 
@@ -155,7 +155,7 @@
             this.label3.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(66, 347);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 25);
+            this.label3.Size = new System.Drawing.Size(243, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Data i godzina odjazdu";
             // 
@@ -172,7 +172,7 @@
             this.label4.Location = new System.Drawing.Point(63, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(424, 50);
+            this.label4.Size = new System.Drawing.Size(419, 50);
             this.label4.TabIndex = 10;
             this.label4.Text = "Wyszukaj połączenia";
             // 

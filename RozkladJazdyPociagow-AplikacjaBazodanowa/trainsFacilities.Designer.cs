@@ -59,7 +59,7 @@
             // 
             this.trainSearchBack.BackColor = System.Drawing.Color.White;
             this.trainSearchBack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.trainSearchBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.pin;
+            this.trainSearchBack.Image = global::RozkladJazdyPociagow_AplikacjaBazodanowa.Properties.Resources.trainBlack;
             this.trainSearchBack.Location = new System.Drawing.Point(66, 167);
             this.trainSearchBack.Margin = new System.Windows.Forms.Padding(0);
             this.trainSearchBack.Name = "trainSearchBack";
@@ -75,7 +75,7 @@
             this.label1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(66, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 25);
+            this.label1.Size = new System.Drawing.Size(166, 25);
             this.label1.TabIndex = 25;
             this.label1.Text = "Nazwa pociągu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +102,7 @@
             this.label4.Location = new System.Drawing.Point(63, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(454, 50);
+            this.label4.Size = new System.Drawing.Size(449, 50);
             this.label4.TabIndex = 24;
             this.label4.Text = "Udogodnienia pociągu";
             // 
@@ -142,7 +142,7 @@
             // 
             // trainsFacilities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.exit);
             this.Controls.Add(this.trainSearch);
