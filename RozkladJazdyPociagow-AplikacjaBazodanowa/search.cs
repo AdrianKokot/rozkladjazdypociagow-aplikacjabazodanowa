@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace RozkladJazdyPociagow_AplikacjaBazodanowa
 {
@@ -14,12 +15,14 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
     {
         private bool firstCityValid = false;
         private bool secondCityValid = false;
+        TimetableResult timetable = null;
 
         public search()
         {
             InitializeComponent();
             timetableSearchResult1.Visible = false;
             exit.Visible = false;
+            btnRaport.Visible = false;
         }
 
         public void Reset()
@@ -33,8 +36,10 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             timetableSearchResult1.Visible = false;
             timetableSearchResult1.Reset();
             exit.Visible = false;
+            btnRaport.Visible = false;
             dateDate.Value = DateTime.Now;
             dateTime.Value = DateTime.Now;
+            timetable = null;
         }
 
         public void InitAutoComplete()
@@ -84,14 +89,16 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
             }
             else
             {
-                TimetableResult timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
+                timetable = DataBase.FindRoute(firstCity.Text, secondCity.Text, new StationTime(dateTime.Value.Hour, dateTime.Value.Minute), dateDate.Value.Day % 7);
                 if (timetable != null)
                 {
                     timetableSearchResult1.FullfillLabels(timetable);
                     timetableSearchResult1.Visible = true;
                     timetableSearchResult1.BringToFront();
                     exit.Visible = true;
+                    btnRaport.Visible = true;
                     exit.BringToFront();
+                    btnRaport.BringToFront();
                 }
                 else
                 {
@@ -114,7 +121,9 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         {
             timetableSearchResult1.Visible = false;
             exit.Visible = false;
+            btnRaport.Visible = false;
             timetableSearchResult1.Reset();
+            timetable = null;
         }
 
         private void firstCityBoxBack_Click(object sender, EventArgs e)
@@ -135,6 +144,45 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         private void DateDateBack_Click(object sender, EventArgs e)
         {
             this.ActiveControl = dateDate;
+        }
+
+        private void BtnRaport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Zapisz raport jako";
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "Plik tekstowy (*.txt)|*.txt";
+            saveFileDialog1.CheckPathExists = true;
+
+            string fileName = @"";
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileName += saveFileDialog1.FileName;
+                try
+                {
+                    if (File.Exists(fileName))
+                        File.Delete(fileName);
+
+                    using (StreamWriter sw = File.CreateText(fileName))
+                    {
+                        sw.WriteLine("Raport utworzony " + DateTime.Now.ToShortDateString() + " o godzinie " + DateTime.Now.ToShortTimeString() + "\n");
+                        sw.WriteLine("Rozkład na dzień " + dateDate.Value.ToShortDateString() + " od godziny " + dateTime.Value.Hour + ":00\n");
+                        sw.WriteLine("----- Stacja początkowa --- ---- --- Stacja końcowa -----");
+                        sw.WriteLine("\t" + DataBase.stations.Find(x => x.StationID == timetable.startStationID).StationName + "\t\t\t" + DataBase.stations.Find(x => x.StationID == timetable.endStationID).StationName);
+                        sw.WriteLine("\n----- Nazwa pociągu ---------- Odjazd ------- Przyjazd --");
+                        for (int i = 0; i < timetable.timetable.Count; i++)
+                            sw.WriteLine("\t" + DataBase.trains.Find(x => x.TrainID == timetable.timetable[i].TrainID).ToString() + (DataBase.trains.Find(x => x.TrainID == timetable.timetable[i].TrainID).ToString().Length < 15 ? "\t\t" : "\t") + timetable.timetable[i].Hours.Find(x => x.StationID == timetable.startStationID).ToString() + "\t\t" + timetable.timetable[i].Hours.Find(x => x.StationID == timetable.endStationID).ToString());
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } else
+            {
+                MessageBox.Show("Wystąpił błąd");
+            }
+            
         }
     }
 }

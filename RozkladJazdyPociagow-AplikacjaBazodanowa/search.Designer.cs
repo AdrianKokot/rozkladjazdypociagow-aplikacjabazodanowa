@@ -56,6 +56,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnRaport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.firstCityError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCityBoxBack)).BeginInit();
@@ -372,11 +373,27 @@
             this.pictureBox9.TabIndex = 27;
             this.pictureBox9.TabStop = false;
             // 
+            // btnRaport
+            // 
+            this.btnRaport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
+            this.btnRaport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRaport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRaport.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.btnRaport.ForeColor = System.Drawing.Color.White;
+            this.btnRaport.Location = new System.Drawing.Point(372, 458);
+            this.btnRaport.Name = "btnRaport";
+            this.btnRaport.Size = new System.Drawing.Size(270, 43);
+            this.btnRaport.TabIndex = 28;
+            this.btnRaport.Text = "Generuj raport";
+            this.btnRaport.UseVisualStyleBackColor = false;
+            this.btnRaport.Click += new System.EventHandler(this.BtnRaport_Click);
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.btnRaport);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -452,5 +469,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnRaport;
     }
 }
