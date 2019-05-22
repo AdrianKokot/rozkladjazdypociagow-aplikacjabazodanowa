@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace RozkladJazdyPociagow_AplikacjaBazodanowa
+namespace RJP_EdytorBazyDanych
 {
     static class Program
     {
