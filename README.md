@@ -1,16 +1,15 @@
-<div style="display: flex; justify-content: space-between;"><span>Adrian Kokot 3D</span><span>Zadanie bazodanowe </span></div>
-<h1 style="text-align:center;">Karta projektu</h1>
-
+*Adrian Kokot 3D - Zadanie bazodanowe*
+#Karta projektu
 **Projekt do wykonania:**
 Aplikacja bazodanowa, obsługująca format JSON, używająca minimum 5 zapytań dzielących się na: wyświetlające, generujące raport i edytujące dane w bazie.
-***
+
 **Tematyka:** rozkład jazdy pociągów.
-***
+
 **Krótki opis:**
 Aplikacja jest podzielona na dwie części:
 * *Część "kliencka"* - aplikacja o nazwie RozkladJazdyPociagow-AplikacjaBazodanowa, która zajmuje się wyświetlaniem informacji z bazy,
 * *Część "zarządzająca"* – aplikacja o nazwie RJP-EdytorBazyDanych, która zajmuje się edycją informacji w bazie.
-***
+
 **Wykonane zapytania:**
 * *Wyszukaj połączenia* – wyświetla połączenia komunikacyjne między podanymi stacjami w danym dniu od podanej godziny,
 * *Przebieg pociągu*– wyświetla stacje na podanej trasie danego pociągu,
