@@ -17,6 +17,7 @@ namespace RJP_EdytorBazyDanych
             DataBase.ImportAll();
             stationEdit1.InitAutocomplete();
             trainEdit1.InitAutocomplete();
+            addTimetable1.InitAutocomplete();
             btns = new List<Button>()
             {
                 btnEditStations,
@@ -57,6 +58,8 @@ namespace RJP_EdytorBazyDanych
             }
             stationEdit1.Reset();
             trainEdit1.Reset();
+            addTimetable1.Reset();
+            addTimetable1.InitAutocomplete();
         }
 
         private void BtnEditStations_Click(object sender, EventArgs e)
@@ -75,11 +78,12 @@ namespace RJP_EdytorBazyDanych
 
         private void BtnAddTimetable_Click(object sender, EventArgs e)
         {
+            
             resetBtnsColorsAndPanels();
             btnAddTimetable.BackColor = Color.FromArgb(246, 162, 38);
             btnAddTimetable.ForeColor = Color.White;
             btnAddTimetable.Image = white[2];
-            //stationDetails1.BringToFront();
+            addTimetable1.BringToFront();
         }
     }
 }

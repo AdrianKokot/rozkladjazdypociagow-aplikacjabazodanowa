@@ -330,9 +330,41 @@ namespace RJP
             return false;
         }
 
-        static public bool AddTrain(string name)
+        static public bool AddTimetable(string name, List<Station> newStations, List<StationTime> newStationTimes, List<int> newDays)
         {
-            return true;
+            Train train = trains.Find(x => x.ToString().ToLower() == name.ToLower());
+            if(train != null)
+            {
+                TrainPath newTrainPath = new TrainPath();
+                newTrainPath.Stations = newStations.Select(x => x.StationID).ToList<int>();
+                TrainPath old = trainPaths.Find(x => Enumerable.SequenceEqual(x.Stations, newTrainPath.Stations));
+                int pathID;
+                if (old != null)
+                {
+                    pathID = old.PathID;
+                }
+                else
+                {
+                    newTrainPath.PathID = trainPaths.Count + 1;
+                    pathID = newTrainPath.PathID;
+                    trainPaths.Add(newTrainPath);
+                    var outputTrainPath = JsonConvert.SerializeObject(trainPaths);
+                    File.WriteAllText(TrainpathsFile, outputTrainPath);
+                }
+                Timetable newTimetable = new Timetable();
+                newTimetable.TrainID = train.TrainID;
+                newTimetable.PathID = pathID;
+                newTimetable.Hours = newStationTimes;
+                newTimetable.Days = newDays;
+                timetable.Add(newTimetable);
+                var outputTimetable = JsonConvert.SerializeObject(timetable);
+                File.WriteAllText(TimetablesFile, outputTimetable);
+                train.PathIDs.Add(pathID);
+                var outputTrain = JsonConvert.SerializeObject(trains);
+                File.WriteAllText(TrainsFile, outputTrain);
+                return true;
+            }
+            return false;
         }
     }
 }

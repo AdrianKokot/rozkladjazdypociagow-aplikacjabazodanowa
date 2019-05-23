@@ -22,6 +22,7 @@ namespace RJP_EdytorBazyDanych
             trains.Sort();
             autoComplete.AddRange(trains.ToArray());
             trainSelect.AutoCompleteCustomSource = autoComplete;
+            trainSelect.Items.Clear();
             trainSelect.Items.AddRange(trains.ToArray());
         }
 
@@ -32,6 +33,8 @@ namespace RJP_EdytorBazyDanych
             trainValid = false;
             newTrainName.Text = "";
             trainSelect.Text = "";
+            trainError.SetError(trainSelect, "");
+            newTrainError.SetError(newTrainName, "");
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
@@ -47,7 +50,15 @@ namespace RJP_EdytorBazyDanych
             }
             else
             {
-                newTrainError.SetError(newTrainName, "Nazwa nie może być pusta");
+                if (!trainValid)
+                {
+                    this.ActiveControl = trainSelect;
+                    trainError.SetError(trainSelect, "Podany pociąg nie istnieje");
+                } else
+                {
+                    this.ActiveControl = newTrainName;
+                    newTrainError.SetError(newTrainName, "Nazwa nie może być pusta");
+                }
             }
         }
 

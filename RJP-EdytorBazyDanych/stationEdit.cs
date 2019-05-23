@@ -25,6 +25,7 @@ namespace RJP_EdytorBazyDanych
             stations.Sort();
             autoComplete.AddRange(stations.ToArray());
             stationSelect.AutoCompleteCustomSource = autoComplete;
+            stationSelect.Items.Clear();
             stationSelect.Items.AddRange(stations.ToArray());
         }
 
@@ -35,6 +36,8 @@ namespace RJP_EdytorBazyDanych
             stationValid = false;
             newStationName.Text = "";
             stationSelect.Text = "";
+            newStationError.SetError(newStationName, "");
+            stationError.SetError(stationSelect, "");
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
@@ -48,7 +51,16 @@ namespace RJP_EdytorBazyDanych
                 }
             } else
             {
-                newStationError.SetError(newStationName, "Nazwa nie może być pusta");
+                if (!stationValid)
+                {
+                    stationError.SetError(stationSelect, "Podana stacja nie istnieje");
+                    this.ActiveControl = stationSelect;
+                } else
+                {
+                    newStationError.SetError(newStationName, "Nazwa nie może być pusta");
+                    this.ActiveControl = newStationName;
+                }
+                    
             }
         }
 

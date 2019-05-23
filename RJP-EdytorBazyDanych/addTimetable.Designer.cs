@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addTimetable));
             this.label4 = new System.Windows.Forms.Label();
             this.trainSelect = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,13 +39,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trainSearchBack = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.stationsList = new System.Windows.Forms.Label();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.stationsList = new System.Windows.Forms.TextBox();
+            this.trainError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.stationError = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainSearchBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -51,6 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationError)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -75,6 +82,8 @@
             this.trainSelect.Name = "trainSelect";
             this.trainSelect.Size = new System.Drawing.Size(316, 33);
             this.trainSelect.TabIndex = 29;
+            this.trainSelect.TabIndexChanged += new System.EventHandler(this.TrainSelect_TabIndexChanged);
+            this.trainSelect.TextChanged += new System.EventHandler(this.TrainSelect_TabIndexChanged);
             // 
             // label1
             // 
@@ -118,12 +127,13 @@
             this.addStation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.addStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStation.Image = global::RJP_EdytorBazyDanych.Properties.Resources.plus;
-            this.addStation.Location = new System.Drawing.Point(567, 282);
+            this.addStation.Location = new System.Drawing.Point(584, 282);
             this.addStation.Margin = new System.Windows.Forms.Padding(0);
             this.addStation.Name = "addStation";
             this.addStation.Size = new System.Drawing.Size(43, 43);
             this.addStation.TabIndex = 35;
             this.addStation.UseVisualStyleBackColor = true;
+            this.addStation.Click += new System.EventHandler(this.AddStation_Click);
             // 
             // pictureBox1
             // 
@@ -162,14 +172,6 @@
             this.label3.Text = "Pociąg będzie przejeżdżał przez: ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // stationsList
-            // 
-            this.stationsList.AutoSize = true;
-            this.stationsList.Location = new System.Drawing.Point(66, 397);
-            this.stationsList.Name = "stationsList";
-            this.stationsList.Size = new System.Drawing.Size(0, 25);
-            this.stationsList.TabIndex = 37;
-            // 
             // dateTime
             // 
             this.dateTime.CalendarFont = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
@@ -177,7 +179,7 @@
             this.dateTime.CustomFormat = " HH:mm";
             this.dateTime.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime.Location = new System.Drawing.Point(471, 287);
+            this.dateTime.Location = new System.Drawing.Point(482, 287);
             this.dateTime.Margin = new System.Windows.Forms.Padding(0);
             this.dateTime.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
             this.dateTime.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
@@ -191,7 +193,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::RJP_EdytorBazyDanych.Properties.Resources.clock;
-            this.pictureBox6.Location = new System.Drawing.Point(432, 282);
+            this.pictureBox6.Location = new System.Drawing.Point(443, 282);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
@@ -203,7 +205,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.White;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Location = new System.Drawing.Point(471, 287);
+            this.pictureBox9.Location = new System.Drawing.Point(482, 287);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(1, 32);
             this.pictureBox9.TabIndex = 42;
@@ -213,7 +215,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Location = new System.Drawing.Point(471, 287);
+            this.pictureBox7.Location = new System.Drawing.Point(482, 287);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(90, 1);
             this.pictureBox7.TabIndex = 41;
@@ -223,7 +225,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(471, 318);
+            this.pictureBox2.Location = new System.Drawing.Point(482, 318);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(90, 1);
             this.pictureBox2.TabIndex = 40;
@@ -233,24 +235,65 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(560, 287);
+            this.pictureBox3.Location = new System.Drawing.Point(571, 287);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1, 32);
             this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(61)))));
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(238)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(66, 472);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(218, 43);
+            this.btnSubmit.TabIndex = 44;
+            this.btnSubmit.Text = "Zatwierdź";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
+            // 
+            // stationsList
+            // 
+            this.stationsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.stationsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stationsList.Location = new System.Drawing.Point(66, 397);
+            this.stationsList.MaximumSize = new System.Drawing.Size(615, 50);
+            this.stationsList.Multiline = true;
+            this.stationsList.Name = "stationsList";
+            this.stationsList.ReadOnly = true;
+            this.stationsList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.stationsList.Size = new System.Drawing.Size(615, 50);
+            this.stationsList.TabIndex = 45;
+            // 
+            // trainError
+            // 
+            this.trainError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.trainError.ContainerControl = this;
+            this.trainError.Icon = ((System.Drawing.Icon)(resources.GetObject("trainError.Icon")));
+            // 
+            // stationError
+            // 
+            this.stationError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.stationError.ContainerControl = this;
+            this.stationError.Icon = ((System.Drawing.Icon)(resources.GetObject("stationError.Icon")));
             // 
             // addTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.Controls.Add(this.stationsList);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dateTime);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.stationsList);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.addStation);
             this.Controls.Add(this.stationSelect);
@@ -261,7 +304,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "addTimetable";
             this.Size = new System.Drawing.Size(708, 540);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -271,6 +314,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,12 +332,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addStation;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label stationsList;
         private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox stationsList;
+        private System.Windows.Forms.ErrorProvider trainError;
+        private System.Windows.Forms.ErrorProvider stationError;
     }
 }

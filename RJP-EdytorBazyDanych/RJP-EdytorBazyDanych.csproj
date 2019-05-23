@@ -52,6 +52,12 @@
     <Compile Include="..\RozkladJazdyPociagow-AplikacjaBazodanowa\Database.cs">
       <Link>Database.cs</Link>
     </Compile>
+    <Compile Include="addTimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addTimetable.Designer.cs">
+      <DependentUpon>addTimetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="trainEdit.Designer.cs">
       <DependentUpon>trainEdit.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addTimetable.resx">
+      <DependentUpon>addTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trainWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

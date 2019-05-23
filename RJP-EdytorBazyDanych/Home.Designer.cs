@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stationEdit1 = new RJP_EdytorBazyDanych.stationEdit();
             this.trainEdit1 = new RJP_EdytorBazyDanych.trainEdit();
+            this.addTimetable1 = new RJP_EdytorBazyDanych.addTimetable();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,12 +152,23 @@
             this.trainEdit1.Size = new System.Drawing.Size(708, 540);
             this.trainEdit1.TabIndex = 22;
             // 
+            // addTimetable1
+            // 
+            this.addTimetable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.addTimetable1.Font = new System.Drawing.Font("Google Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.addTimetable1.Location = new System.Drawing.Point(252, 0);
+            this.addTimetable1.Margin = new System.Windows.Forms.Padding(6);
+            this.addTimetable1.Name = "addTimetable1";
+            this.addTimetable1.Size = new System.Drawing.Size(708, 540);
+            this.addTimetable1.TabIndex = 23;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(960, 540);
+            this.Controls.Add(this.addTimetable1);
             this.Controls.Add(this.trainEdit1);
             this.Controls.Add(this.btnAddTimetable);
             this.Controls.Add(this.btnEditTrain);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.Button btnEditTrain;
         private System.Windows.Forms.Button btnAddTimetable;
         private trainEdit trainEdit1;
+        private addTimetable addTimetable1;
     }
 }
 
