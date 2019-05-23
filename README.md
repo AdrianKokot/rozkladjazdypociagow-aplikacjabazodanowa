@@ -1,7 +1,5 @@
 *Adrian Kokot 3D - Zadanie bazodanowe*
-
-#Karta projektu
-
+# Karta projektu
 **Projekt do wykonania:**
 Aplikacja bazodanowa, obsługująca format JSON, używająca minimum 5 zapytań dzielących się na: wyświetlające, generujące raport i edytujące dane w bazie.
 
