@@ -1,0 +1,90 @@
+﻿[
+    {
+        "StationID": 1,
+        "StationName": "Poznań Główny"
+    },
+    {
+        "StationID": 3,
+        "StationName": "Wrocław Główny"
+    },
+    {
+        "StationID": 4,
+        "StationName": "Leszno"
+    },
+    {
+        "StationID": 5,
+        "StationName": "Gniezno"
+    },
+    {
+        "StationID": 6,
+        "StationName": "Piła Główna"
+    },
+    {
+        "StationID": 7,
+        "StationName": "Zbąszynek"
+    },
+    {
+        "StationID": 8,
+        "StationName": "Gołańcz"
+    },
+    {
+        "StationID": 9,
+        "StationName": "Wągrowiec"
+    },
+    {
+        "StationID": 11,
+        "StationName": "Wargowo"
+    },
+    {
+        "StationID": 12,
+        "StationName": "Oborniki Wielkopolskie"
+    },
+    {
+        "StationID": 13,
+        "StationName": "Ostrów Wielkopolski"
+    },
+    {
+        "StationID": 14,
+        "StationName": "Nowy Tomyśl"
+    },
+    {
+        "StationID": 15,
+        "StationName": "Środa Wielkopolska"
+    },
+    {
+        "StationID": 16,
+        "StationName": "Sulęcinek"
+    },
+    {
+        "StationID": 17,
+        "StationName": "Jarocin"
+    },
+    {
+        "StationID": 18,
+        "StationName": "Murowana Goślina"
+    },
+    {
+        "StationID": 19,
+        "StationName": "Mosina"
+    },
+    {
+        "StationID": 20,
+        "StationName": "Kościan"
+    },
+    {
+        "StationID": 21,
+        "StationName": "Rawicz"
+    },
+    {
+        "StationID": 22,
+        "StationName": "Biskupice Wielkopolskie"
+    },
+    {
+        "StationID": 23,
+        "StationName": "Pobiedziska"
+    },
+    {
+        "StationID": 24,
+        "StationName": "Opalenica"
+    }
+]

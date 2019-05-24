@@ -1,0 +1,17 @@
+﻿[
+    {
+        "CompanyID": 1,
+        "CompanyName": "PKP Intercity S.A.",
+	"ShortCompanyName": "InterCity"
+    },
+    {
+        "CompanyID": 2,
+        "CompanyName": "Przewozy Regionalne sp. z o.o.",
+	"ShortCompanyName": "REGIO"
+    },
+    {
+        "CompanyID": 3,
+        "CompanyName": "Koleje Wielkopolskie Sp. z o.o.",
+	"ShortCompanyName": "KW"
+    }
+]

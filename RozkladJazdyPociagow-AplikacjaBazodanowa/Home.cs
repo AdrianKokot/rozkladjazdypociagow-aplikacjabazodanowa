@@ -14,7 +14,6 @@ namespace RozkladJazdyPociagow_AplikacjaBazodanowa
         public Home()
         {
             InitializeComponent();
-            DataBase.ImportAll();
             search1.InitAutoComplete();
             trainRoute1.InitAutoTrainAutocomplete();
             stationDetails1.InitAutoComplete();

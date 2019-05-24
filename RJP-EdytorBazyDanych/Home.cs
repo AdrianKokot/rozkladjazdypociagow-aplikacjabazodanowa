@@ -14,7 +14,6 @@ namespace RJP_EdytorBazyDanych
         public Home()
         {
             InitializeComponent();
-            DataBase.ImportAll();
             stationEdit1.InitAutocomplete();
             trainEdit1.InitAutocomplete();
             addTimetable1.InitAutocomplete();

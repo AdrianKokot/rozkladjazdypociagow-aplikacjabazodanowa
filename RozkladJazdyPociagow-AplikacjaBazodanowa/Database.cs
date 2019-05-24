@@ -132,12 +132,14 @@ namespace RJP
 
     static class DataBase
     {
-        private static string StationsFile = @"DB\stations.txt";
-        private static string TrainsFile = @"DB\trains.txt";
-        private static string TrainpathsFile = @"DB\trainpaths.txt";
-        private static string TimetablesFile = @"DB\timetables.txt";
-        private static string CompaniesFile = @"DB\companies.txt";
-        private static string FacilitiesFile = @"DB\facilities.txt";
+        private static string[] EXT = {"json", "txt"};
+        private static string StationsFile = @"DB\stations.";
+        private static string TrainsFile = @"DB\trains.";
+        private static string TrainpathsFile = @"DB\trainpaths.";
+        private static string TimetablesFile = @"DB\timetables.";
+        private static string CompaniesFile = @"DB\companies.";
+        private static string FacilitiesFile = @"DB\facilities.";
+        private static int idEXT { get; set; }
 
 
         public static List<Station> stations;
@@ -149,42 +151,43 @@ namespace RJP
 
         static private void ImportStations()
         {
-            var jsonData = File.ReadAllText(StationsFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(StationsFile + EXT[idEXT], Encoding.UTF8);
             stations = JsonConvert.DeserializeObject<List<Station>>(jsonData);
         }
 
         static private void ImportTrains()
         {
-            var jsonData = File.ReadAllText(TrainsFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(TrainsFile + EXT[idEXT], Encoding.UTF8); 
             trains = JsonConvert.DeserializeObject<List<Train>>(jsonData);
         }
 
         static private void ImportTrainPaths()
         {
-            var jsonData = File.ReadAllText(TrainpathsFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(TrainpathsFile + EXT[idEXT], Encoding.UTF8);
             trainPaths = JsonConvert.DeserializeObject<List<TrainPath>>(jsonData);
         }
 
         static private void ImportTimetables()
         {
-            var jsonData = File.ReadAllText(TimetablesFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(TimetablesFile + EXT[idEXT], Encoding.UTF8);
             timetable = JsonConvert.DeserializeObject<List<Timetable>>(jsonData);
         }
 
         static private void ImportCompanies()
         {
-            var jsonData = File.ReadAllText(CompaniesFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(CompaniesFile + EXT[idEXT], Encoding.UTF8);
             companies = JsonConvert.DeserializeObject<List<Company>>(jsonData);
         }
 
         static private void ImportFacilities()
         {
-            var jsonData = File.ReadAllText(FacilitiesFile, Encoding.UTF8);
+            var jsonData = File.ReadAllText(FacilitiesFile+EXT[idEXT], Encoding.UTF8);
             facilities = JsonConvert.DeserializeObject<List<Facilities>>(jsonData);
         }
 
         static public void ImportAll()
         {
+            idEXT = File.Exists(StationsFile + EXT[0]) ? 0 : 1;
             ImportStations();
             ImportTrains();
             ImportTrainPaths();

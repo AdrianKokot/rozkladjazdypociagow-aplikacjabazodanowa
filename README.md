@@ -1,7 +1,7 @@
 *Adrian Kokot 3D - Zadanie bazodanowe*
 # Karta projektu
 **Projekt do wykonania:**
-Aplikacja bazodanowa, obsługująca format JSON, używająca minimum 5 zapytań dzielących się na: wyświetlające, generujące raport i edytujące dane w bazie.
+Aplikacja bazodanowa, obsługująca format JSON (plik .JSON lub .TXT), używająca minimum 5 zapytań dzielących się na: wyświetlające, generujące raport i edytujące dane w bazie.
 
 **Tematyka:** rozkład jazdy pociągów.
 
@@ -12,6 +12,7 @@ Aplikacja jest podzielona na dwie części:
 
 **Wykonane zapytania:**
 * *Wyszukaj połączenia* – wyświetla połączenia komunikacyjne między podanymi stacjami w danym dniu od podanej godziny,
+  * *Generuj raport* - tworzy raport w pliku tekstowym w wyznaczonym miejscu
 * *Przebieg pociągu*– wyświetla stacje na podanej trasie danego pociągu,
 * *Pociągi na stacji* – wyświetla pociągi na podanej stacji,
 * *Pociągi przewoźników* – wyświetla pociągi podanego przewoźnika,
